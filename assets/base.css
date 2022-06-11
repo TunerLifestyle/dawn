@@ -2940,7 +2940,8 @@ details-disclosure > details {
 }
   
   .jdgm-rev__timestamp {
-  float: right !important; 
+  float: right !important;
+  font-size: 1.2rem;
   }
   
   .jdgm-rev__icon::after, .jdgm-rev__buyer-badge, .jdgm-rev__icon {

@@ -2931,10 +2931,3 @@ details-disclosure > details {
   .banner--adapt, .banner--adapt_image.banner--mobile-bottom .banner__media:not(.placeholder) {
     max-height: 30vh;
   }   
-
-/* JUDGE ME MODIFICATIONS */
-
-.jdgm-widget.jdgm-widget {
-  float: right;
-  margin-top: 0.5rem;
-}

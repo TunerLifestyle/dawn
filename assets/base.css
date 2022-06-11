@@ -2928,6 +2928,13 @@ details-disclosure > details {
     }
     
   /* Max height on collection banner */
-  .banner--adapt, .banner--adapt_image.banner--mobile-bottom .banner__media:not(.placeholder) {
+  .banner--adapt, .banne
+  r--adapt_image.banner--mobile-bottom .banner__media:not(.placeholder) {
     max-height: 30vh;
   }   
+  /* JUDGEME MODIFICATIONS */ 
+
+.jdgm-preview-badge--with-link {
+  float: right !important;
+  margin-top: 0.5rem !important;
+}

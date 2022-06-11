@@ -1206,9 +1206,3 @@ a.product__text {
   border-bottom-width: thin;
   border-bottom-style: none;
 }
-
-/* JUDGEME MODIFICATIONS */ 
-
-.jdgm-preview-badge--with-link {
-  float: right;
-  margin-top: 0.5rem;

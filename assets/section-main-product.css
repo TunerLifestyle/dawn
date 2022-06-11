@@ -165,6 +165,9 @@
 variant-radios,
 variant-selects {
   display: block;
+  border-top: 1px solid;
+  border-color: #aaa;
+  padding-bottom: 2.5rem;
 }
 
 .product-form__input--dropdown {

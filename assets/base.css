@@ -2933,6 +2933,11 @@ details-disclosure > details {
     max-height: 30vh;
   }
   /* JUDGEME MODIFICATIONS */ 
+
+.jdgm-preview-badge--with-link {
+  float: right !important;
+  margin-top: 0.5rem !important;
+}
   
   .jdgm-rev__timestamp {
   float: right !important;

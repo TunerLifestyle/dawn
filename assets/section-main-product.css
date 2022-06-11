@@ -1206,3 +1206,8 @@ a.product__text {
   border-bottom-width: thin;
   border-bottom-style: none;
 }
+
+  .jdgm-preview-badge--with-link {
+  float: right !important;
+  margin-top: 0.5rem !important;
+}

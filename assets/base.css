@@ -2938,3 +2938,23 @@ details-disclosure > details {
   float: right !important;
   margin-top: 0.5rem !important;
 }
+  
+  .jdgm-rev__timestamp {
+  float: right !important; 
+  }
+  
+  .jdgm-rev__icon::after, .jdgm-rev__buyer-badge, .jdgm-rev__icon {
+  display: none !important;
+}
+  
+  .jdgm-rev__buyer-badge-wrapper:after {
+content: 'Verified';
+display: inline-block;
+padding: 2px 7px;
+background-color: rgb(68, 68, 68);
+color: #ffffff;
+margin-top: 5px;
+      vertical-align: bottom;
+}
+  
+  

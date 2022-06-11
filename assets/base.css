@@ -2931,7 +2931,7 @@ details-disclosure > details {
   .banner--adapt, .banne
   r--adapt_image.banner--mobile-bottom .banner__media:not(.placeholder) {
     max-height: 30vh;
-  }   
+  }
   /* JUDGEME MODIFICATIONS */ 
 
 .jdgm-preview-badge--with-link {
@@ -2958,5 +2958,9 @@ color: #ffffff;
 margin-top: 5px;
       vertical-align: bottom;
 }
+  
+  .jdgm-write-rev-link {
+    text-decoration: none;
+  }
   
   

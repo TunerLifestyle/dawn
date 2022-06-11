@@ -2950,7 +2950,8 @@ details-disclosure > details {
   .jdgm-rev__buyer-badge-wrapper:after {
 content: 'Verified';
 display: inline-block;
-padding: 2px 7px;
+padding: 0.2rem 0.7rem;
+font-size: 1.1rem;
 background-color: rgb(68, 68, 68);
 color: #ffffff;
 margin-top: 5px;

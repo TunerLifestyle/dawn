@@ -64,11 +64,6 @@
             "content": "",
             "page": "{{ product.metafields.my_fields.volume_discount.value }}"
           }
-        },
-        "019e901b-a844-455c-b6c1-1b74b2d0ca9d": {
-          "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-          }
         }
       },
       "block_order": [
@@ -81,8 +76,7 @@
         "buy_buttons",
         "description",
         "collapsible-row-1",
-        "2671e0fd-8bbc-4a64-bce0-db59bc63e25a",
-        "019e901b-a844-455c-b6c1-1b74b2d0ca9d"
+        "2671e0fd-8bbc-4a64-bce0-db59bc63e25a"
       ],
       "settings": {
         "enable_sticky_info": false,
@@ -111,10 +105,27 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "165497774586246f1d": {
+      "type": "apps",
+      "blocks": {
+        "ca3f2bfe-ba55-4297-8ff2-3261c701e9fd": {
+          "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "ca3f2bfe-ba55-4297-8ff2-3261c701e9fd"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
     "main",
-    "product-recommendations"
+    "product-recommendations",
+    "165497774586246f1d"
   ]
 }

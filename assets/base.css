@@ -2962,5 +2962,12 @@ margin-top: 5px;
   .jdgm-write-rev-link {
     text-decoration: none;
   }
+
+  @media screen and (min-width: 750px) {
+  .jdgm-rev-widg.jdgm-rev-widg {
+    margin-top: 5rem;
+    }
+}
+    
   
   

@@ -593,6 +593,9 @@
   {%- endif -%}
 
   <script>
+        setTimeout(function(){
+      document.getElementByClassName('tl-reviews').style.visibility = "visible";
+    },1000);
     document.addEventListener('DOMContentLoaded', function() {
       function isIE() {
         const ua = window.navigator.userAgent;
@@ -613,10 +616,6 @@
         hiddenInput.value = event.currentTarget.value;
       });
     });
-    
-    setTimeout(function(){
-      document.getElementByClassName('tl-reviews').style.visibility = "visible";
-    },1000);
   </script>
 
   {%- liquid

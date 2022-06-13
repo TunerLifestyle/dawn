@@ -613,6 +613,10 @@
         hiddenInput.value = event.currentTarget.value;
       });
     });
+    
+    setTimeout(function(){
+      document.getElementByClass('tl-reviews').style.visibility = "visible";
+    },1000);
   </script>
 
   {%- liquid

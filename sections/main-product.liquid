@@ -593,10 +593,10 @@
   {%- endif -%}
 
   <script>
-        setTimeout(function(){
+    document.addEventListener('DOMContentLoaded', function() {
+              setTimeout(function(){
       document.getElementId('tl-reviews').style.visibility = "visible";
     },1000);
-    document.addEventListener('DOMContentLoaded', function() {
       function isIE() {
         const ua = window.navigator.userAgent;
         const msie = ua.indexOf('MSIE ');

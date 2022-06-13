@@ -10,6 +10,7 @@
         },
         "72b198bc-688b-447c-a287-3c52dde089be": {
           "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "disabled": true,
           "settings": {
           }
         },

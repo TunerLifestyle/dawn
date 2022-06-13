@@ -2939,6 +2939,10 @@ details-disclosure > details {
   margin-top: 0.5rem !important;
 }
   
+  .jdgm-prev-badge__stars {
+    color: #ae946d
+  }
+  
   .jdgm-rev__timestamp {
   float: right !important;
   font-size: 1.2rem;

@@ -165,8 +165,6 @@
 variant-radios,
 variant-selects {
   display: block;
-  border-top: 1px solid;
-  border-color: #aaa;
   padding-top: 2.5rem;
 }
 

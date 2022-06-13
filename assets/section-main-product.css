@@ -1021,6 +1021,8 @@ a.product__text {
   .thumbnail-slider {
     display: flex;
     align-items: center;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
   }
 
   .thumbnail-slider .thumbnail-list.slider {

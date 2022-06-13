@@ -594,9 +594,6 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-              setTimeout(function(){
-      document.getElementId('tl-reviews').style.visibility = "visible";
-    },1000);
       function isIE() {
         const ua = window.navigator.userAgent;
         const msie = ua.indexOf('MSIE ');
@@ -616,6 +613,9 @@
         hiddenInput.value = event.currentTarget.value;
       });
     });
+                  setTimeout(function(){
+      document.getElementId('tl-reviews').style.visibility = "visible";
+    },1000);
   </script>
 
   {%- liquid

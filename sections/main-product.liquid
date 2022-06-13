@@ -220,7 +220,7 @@
               </a>
             </div>
           {%- when 'price' -%}
-        <div id="tl-reviews" style="visibility:hidden;">
+        <div class="tl-reviews">
               {% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', concierge_install: true, product: product %}
         </div>
             <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
@@ -613,9 +613,6 @@
         hiddenInput.value = event.currentTarget.value;
       });
     });
-                  setTimeout(function(){
-      document.getElementId('tl-reviews').style.visibility = "visible";
-    },1000);
   </script>
 
   {%- liquid

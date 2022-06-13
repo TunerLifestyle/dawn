@@ -218,6 +218,11 @@
                   {{ product.title | escape }}
                 </h2>
               </a>
+              {% comment %}Start automatically added Judge.me widget{% endcomment %}
+  <div class="product__text">
+    {% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', concierge_install: true, product: product %}
+  </div>
+{% comment %}End automatically added Judge.me widget{% endcomment %}
             </div>
           {%- when 'price' -%}
             <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>

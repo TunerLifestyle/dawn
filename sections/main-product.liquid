@@ -220,7 +220,7 @@
               </a>
             </div>
           {%- when 'price' -%}
-        <div class="tl-reviews">
+        <div class="tl-reviews" style="visibility:hidden;">
               {% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', concierge_install: true, product: product %}
         </div>
             <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>

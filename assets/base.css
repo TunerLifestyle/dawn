@@ -2935,7 +2935,6 @@ details-disclosure > details {
   /* JUDGEME MODIFICATIONS */ 
 
 .jdgm-widget.jdgm-preview-badge--with-link {
-  float: right !important;
   margin-top: 0.5rem !important;
 }
   

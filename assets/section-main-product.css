@@ -1207,3 +1207,8 @@ a.product__text {
   border-bottom-width: thin;
   border-bottom-style: none;
 }
+  @media screen and (max-width: 749px) {
+  .product__media-wrapper {
+    margin-bottom: 2rem;
+  }
+  }

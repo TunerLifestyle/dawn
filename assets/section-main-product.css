@@ -167,10 +167,6 @@ variant-selects {
   display: block;
 }
 
-.product-form__input--dropdown {
-  margin-bottom: 1.6rem;
-}
-
 .product-form__input .form__label {
   padding-left: 0;
 }

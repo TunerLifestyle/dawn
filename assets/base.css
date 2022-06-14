@@ -623,7 +623,8 @@ h6:empty {
   text-underline-offset: 0.3rem;
   color: rgb(var(--color-link));
   background-color: transparent;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
+  font-weight: 400;
   font-family: inherit;
 }
 
@@ -1696,8 +1697,8 @@ details[open] > .share-button__fallback {
   font-family: var(--font-body-family);
   font-style: var(--font-body-style);
   font-weight: var(--font-body-weight);
-  font-size: 1.2rem;
-  color: rgba(var(--color-foreground), 0.75);
+  font-size: 1.4rem;
+  color: rgba(var(--color-foreground));
 }
 
 .field:hover.field:after,
@@ -2226,6 +2227,12 @@ input[type='checkbox'] {
   grid-template-columns: 1fr 2fr 1fr;
   align-items: center;
 }
+  
+    @media screen and (min-width: 990px) {
+    .header {
+      grid-template-columns: none;
+    }
+    }
  
 
 @media screen and (min-width: 990px) {
@@ -2564,7 +2571,8 @@ details[open] > .header__submenu {
 
 @media screen and (min-width: 990px) {
   .header__inline-menu {
-    display: block;
+    display: flex;
+    justify-content: center;
   }
 
   .header--top-center .header__inline-menu {
@@ -2964,19 +2972,6 @@ margin-top: 5px;
     }
 }
   
-  /* IN PROGRESS */
- /*  
-  @media screen and (min-width: 990px) {
-    .header {
-      grid-template-columns: none;
-    }
-      
-      .header__inline-menu {
-        display: flex;
-        justify-content: center;
-  }
-    }
-  */
   
     
   

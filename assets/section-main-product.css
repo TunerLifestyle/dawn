@@ -1191,18 +1191,6 @@ a.product__text {
 }
   
   /* CUSTOM */
-  
-    /* DIVIDERS */
-  .feature_divider {
-  width: 100%;
-  margin-bottom: 20px;
-  margin-top: 10px;
-  display: block;
-  border: 1px solid;
-  border-color: #aaa;
-  border-bottom-width: thin;
-  border-bottom-style: none;
-}
   @media screen and (max-width: 749px) {
   .product__media-wrapper {
     margin-bottom: 2rem;

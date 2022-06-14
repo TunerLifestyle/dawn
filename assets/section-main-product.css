@@ -1185,3 +1185,7 @@ a.product__text {
     margin-bottom: 2rem;
   }
   }
+  
+  .product-popup-modal__content-info table:not([class]) td {
+    padding: 0.5em;
+  }

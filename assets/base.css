@@ -666,14 +666,14 @@ a:not([href]) {
 hr {
   border: none;
   height: 0.1rem;
-  background-color: rgba(var(--color-foreground), 0.2);
+  background-color: #aaa;
   display: block;
-  margin: 5rem 0;
+  margin-bottom: 2rem;
 }
 
 @media screen and (min-width: 750px) {
   hr {
-    margin: 7rem 0;
+    margin: 3rem 0;
   }
 }
 

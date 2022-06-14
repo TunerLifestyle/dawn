@@ -172,6 +172,9 @@
       html {
         box-sizing: border-box;
         font-size: calc(var(--font-body-scale) * 62.5%);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-smoothing: antialiased;
         height: 100%;
       }
 
@@ -187,7 +190,10 @@
         font-family: var(--font-body-family);
         font-style: var(--font-body-style);
         font-weight: var(--font-body-weight);
-    text-rendering: optimizeLegibility;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-smoothing: antialiased;
       }
 
       @media screen and (min-width: 750px) {

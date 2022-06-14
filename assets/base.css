@@ -2933,7 +2933,17 @@ details-disclosure > details {
     max-height: 30vh;
   }
   /* JUDGEME MODIFICATIONS */ 
+@keyframes tl-reviews {
+  to {
+    visibility: visible;
+  }
+}
 
+.tl-reviews{
+  visibility: hidden;
+  animation: 0s linear 2.3s forwards tl-reviews ;
+}
+  
 .tl-reviews {
   margin-top: 0.5rem !important;
   float: right !important;

@@ -2941,7 +2941,7 @@ details-disclosure > details {
 
 .tl-reviews{
   visibility: hidden;
-  animation: 0s linear 2.3s forwards tl-reviews ;
+  animation: 0s linear 1s forwards tl-reviews ;
 }
   
 .tl-reviews {

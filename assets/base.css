@@ -2965,7 +2965,10 @@ margin-top: 5px;
   .jdgm-rev-widg.jdgm-rev-widg {
     margin-top: 5rem;
     }
+    .jdgm-rev-widg__title {
+      font-size: 1.8rem;
 }
+  }
   
   
     

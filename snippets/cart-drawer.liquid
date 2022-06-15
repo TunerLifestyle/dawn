@@ -88,7 +88,7 @@
 
                           <a href="{{ item.url }}" class="cart-item__name h3 break">{{ item.product.title | escape }}</a>
 
-                          {%- if item.variant.compare_at_price != item.final_price -%}
+                          {%- if item.variant.compare_at_price != item.variant.final_price -%}
                             <div class="cart-item__discounted-prices">
                               <span class="visually-hidden">
                                 {{ 'products.product.price.regular_price' | t }}

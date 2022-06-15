@@ -26,7 +26,7 @@
 <div class="card-wrapper animate-arrow">
   <div class="card
     card--{{ settings.card_style }}
-    {% if collection.metafields.my_fields.promotional_banner %} card--media{% else %} card--text{% endif %}
+    {% if collection.metafields.my_fields.promotional_banner =! blank %} card--media{% else %} card--text{% endif %}
     {% if settings.card_style == 'card' %} color-{{ settings.card_color_scheme }} gradient{% endif %}
     {% if extend_height %} card--extend-height{% endif %}
     {% if collection.metafields.my_fields.promotional_banner == nil and settings.card_style == 'card' %} ratio{% endif %}"

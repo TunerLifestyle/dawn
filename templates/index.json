@@ -127,66 +127,11 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "1655326072fee8f5fc": {
-      "type": "multicolumn",
-      "blocks": {
-        "1655326072803db806-0": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/JDM-Racing_Backpacks-Takata-Bride-Sparco-Racing-Harness-Shoulder-Straps-leather-bottom-tunerlifestyle.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": "shopify:\/\/pages\/shipping-accessories"
-          }
-        },
-        "1655326072803db806-1": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "1655326072803db806-2": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "1655326072803db806-0",
-        "1655326072803db806-1",
-        "1655326072803db806-2"
-      ],
-      "settings": {
-        "title": "Multicolumn",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "column_alignment": "left",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "background-1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
     "165452837399fd7558",
     "1654528449c733c9e0",
-    "1654528612f3b623e7",
-    "1655326072fee8f5fc"
+    "1654528612f3b623e7"
   ]
 }

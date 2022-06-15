@@ -2937,7 +2937,7 @@ details-disclosure > details {
   float: right !important;
 }
   .jdgm-rev-widg__summary {
-    margin-bottom: 1rem;
+    margin-bottom: 1rem !important;
   }
   
   .jdgm-rev__timestamp {

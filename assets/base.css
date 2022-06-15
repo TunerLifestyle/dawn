@@ -367,7 +367,6 @@ html.no-js .no-js-hidden {
 
 .text-body {
   font-size: 1.5rem;
-  letter-spacing: 0.06rem;
   line-height: calc(1 + 0.8 / var(--font-body-scale));
   font-family: var(--font-body-family);
   font-style: var(--font-body-style);
@@ -395,22 +394,22 @@ h5,
 }
 
 .hxl {
-  font-size: calc(var(--font-heading-scale) * 5rem);
-}
-
-@media only screen and (min-width: 750px) {
-  .hxl {
-    font-size: calc(var(--font-heading-scale) * 6.2rem);
-  }
-}
-
-.h0 {
   font-size: calc(var(--font-heading-scale) * 2.4rem);
 }
 
 @media only screen and (min-width: 750px) {
-  .h0 {
+  .hxl {
     font-size: calc(var(--font-heading-scale) * 3.6rem);
+  }
+}
+
+.h0 {
+  font-size: calc(var(--font-heading-scale) * 2.2rem);
+}
+
+@media only screen and (min-width: 750px) {
+  .h0 {
+    font-size: calc(var(--font-heading-scale) * 2.8rem);
   }
 }
 
@@ -623,7 +622,7 @@ h6:empty {
   text-underline-offset: 0.3rem;
   color: rgb(var(--color-link));
   background-color: transparent;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 400;
   font-family: inherit;
 }
@@ -1983,7 +1982,7 @@ input[type='checkbox'] {
 
 .quantity__input {
   color: currentColor;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 500;
   opacity: 0.85;
   text-align: center;
@@ -2596,6 +2595,7 @@ details[open] > .header__submenu {
   padding: 1.2rem;
   text-decoration: none;
   color: rgba(var(--color-foreground), 0.75);
+  font-size: 1.5rem;
 }
 
 .header__menu-item:hover {
@@ -2909,15 +2909,10 @@ details-disclosure > details {
     color: #FFF !important; 
   }
   
-  /* FOOTER COLORS */
-  /*.footer-block__heading {
-    color: #7f8c8d; 
+  /* HOMEPAGE */
+  .collection__title.title-wrapper .title {
+    text-align: center;
   }
- 
-  .footer-block__details-content .list-menu__item--link, .copyright__content a, .footer-block__details-content {
-    color: #8a8a8a !important; 
-  }*/
-  
   
   /* REMOVE SALE BADGES */
   .price--sold-out .price__badge-sold-out, .price--on-sale .price__badge-sale {
@@ -2941,6 +2936,9 @@ details-disclosure > details {
   margin-top: 0.5rem !important;
   float: right !important;
 }
+  .jdgm-rev-widg__summary {
+    margin-bottom: 1rem !important;
+  }
   
   .jdgm-rev__timestamp {
   float: right !important;
@@ -2970,7 +2968,10 @@ margin-top: 5px;
   .jdgm-rev-widg.jdgm-rev-widg {
     margin-top: 5rem;
     }
+    .jdgm-rev-widg__title {
+      font-size: 1.8rem;
 }
+  }
   
   
     

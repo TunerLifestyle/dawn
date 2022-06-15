@@ -98,11 +98,12 @@
     "favicon": "shopify:\/\/shop_images\/tunerlifestyle-favicon.png",
     "currency_code_enabled": false,
     "cart_type": "drawer",
-    "checkout_logo_image": "shopify:\/\/shop_images\/tunerlifestyle_checkoutlogo_f7de1acb-dd88-4557-affe-f6767d96879a.png",
-    "checkout_logo_position": "right",
+    "show_cart_note": false,
+    "checkout_logo_image": "shopify:\/\/shop_images\/tunerlifestyle_checkoutlogo_1.png",
+    "checkout_logo_position": "center",
     "checkout_logo_size": "large",
-    "checkout_accent_color": "#03a196",
-    "checkout_button_color": "#03a196",
+    "checkout_accent_color": "#008190",
+    "checkout_button_color": "#008190",
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",

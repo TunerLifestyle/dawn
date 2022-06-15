@@ -32,8 +32,8 @@
     {% if collection.metafields.my_fields.promotional_banner == nil and settings.card_style == 'card' %} ratio{% endif %}"
     style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
   >
-    <div class="card__inner {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }} gradient{% endif %}{% if collection.metafields.my_fields.promotional_banner or settings.card_style == 'standard' %} ratio{% endif %}" style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;">
-      {%- if collection.metafields.my_fields.promotional_banner -%}
+    <div class="card__inner {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }} gradient{% endif %}{% if collection.metafields.my_fields.promotional_banner != blank or settings.card_style == 'standard' %} ratio{% endif %}" style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;">
+      {%- if collection.metafields.my_fields.promotional_banner != blank -%}
         <div class="card__media">
           <div class="media media--transparent media--hover-effect">
             <img

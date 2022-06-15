@@ -38,8 +38,8 @@
           <div class="media media--transparent media--hover-effect">
             <img
               srcset="{%- if card_collection.featured_image.width >= 165 -%}{{ card_collection.featured_image | image_url: width: 165 }} 165w,{%- endif -%}
-                {%- if card_collection.featured_image.width >= 330 -%}{{ collection.metafields.my_fields.promotional_banner | image_url: width: 330 }} 330w,{%- endif -%}
-                {%- if card_collection.featured_image.width >= 535 -%}{{ collection.metafields.my_fields.promotional_banner | image_url: width: 535 }} 535w,{%- endif -%}
+                {%- if collection.metafields.my_fields.promotional_banner.width >= 330 -%}{{ collection.metafields.my_fields.promotional_banner | image_url: width: 330 }} 330w,{%- endif -%}
+                {%- if collection.metafields.my_fields.promotional_banner.width >= 535 -%}{{ collection.metafields.my_fields.promotional_banner | image_url: width: 535 }} 535w,{%- endif -%}
                 {%- if card_collection.featured_image.width >= 750 -%}{{ collection.metafields.my_fields.promotional_banner | image_url: width: 750 }} 750w,{%- endif -%}
                 {%- if card_collection.featured_image.width >= 1000 -%}{{ collection.metafields.my_fields.promotional_banner | image_url: width: 1000 }} 1000w,{%- endif -%}
                 {%- if card_collection.featured_image.width >= 1500 -%}{{ collection.metafields.my_fields.promotional_banner | image_url: width: 1500 }} 1500w,{%- endif -%}

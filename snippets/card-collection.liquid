@@ -51,8 +51,8 @@
               (min-width: 750px) {% if columns > 1 %}calc((100vw - 10rem) / 2){% else %}calc(100vw - 10rem){% endif %},
               calc(100vw - 3rem)"
               alt=""
-              height="{{ card_collection.featured_image.height }}"
-              width="{{ card_collection.featured_image.width }}"
+              height="{{ collection.metafields.my_fields.promotional_banner }}"
+              width="{{ collection.metafields.my_fields.promotional_banner }}"
               loading="lazy"
               class="motion-reduce"
             >

@@ -226,3 +226,9 @@
     display: list-item;
   }
 }
+
+.card-collection-url {
+position: absolute;
+width: 100%;
+height: 100%;
+}

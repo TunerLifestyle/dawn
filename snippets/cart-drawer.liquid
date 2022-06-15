@@ -4,7 +4,6 @@
     Usage:
     {% render 'cart-drawer' %}
 {% endcomment %}
-
 <script src="{{ 'cart.js' | asset_url }}" defer="defer"></script>
 
 <style>
@@ -105,7 +104,7 @@
                             </div>
                           {%- else -%}
                             <div class="product-option">
-                              {{ compare_at_price | money }}
+                              {{ 'products.product.price.regular_price' | t }}
                             </div>
                           {%- endif -%}
 

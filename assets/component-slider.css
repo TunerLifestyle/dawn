@@ -377,7 +377,7 @@ z-index: 2;
 position: absolute;
 left: 1rem;
 border-radius: 44px;
-background: #FFF;
+background-color: #FFF;
 border: .1rem solid rgba(var(--color-foreground),.1).1remsolidrgba(var(--color-foreground),.1)
 
 }

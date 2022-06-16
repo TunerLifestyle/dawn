@@ -367,6 +367,7 @@ slider-component.slider-component-full-width {
 
   /* CUSTOM PRODUCT GALLERY SLIDER */
 .slider-buttons.no-js-hidden.quick-add-hidden {
+  display: none;
 position: absolute;
 top: 50%;
 width: 100%;

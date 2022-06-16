@@ -180,11 +180,6 @@
 }
 
 @media screen and (min-width: 750px) {
-  .background-none .multicolumn-card__image-wrapper {
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
-  }
-
   .background-none .multicolumn-list .multicolumn-card__info,
   .background-none
     .multicolumn-list:not(.slider)
@@ -225,4 +220,13 @@
   .multicolumn-list__item--empty {
     display: list-item;
   }
+}
+
+.card-collection-url {
+  display: block !important;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
 }

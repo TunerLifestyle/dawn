@@ -54,7 +54,10 @@
           {%- if block.settings.image == blank and block.settings.title == blank and block.settings.text == blank and block.settings.link_label == blank -%}
             {%- assign empty_column = ' multicolumn-list__item--empty' -%}
           {%- endif -%}
-
+                {% assign lazy_load = false %}
+                {%- if forloop.index > 2 -%}
+                  {%- assign lazy_load = true -%}
+                {%- endif -%}
           <li id="Slide-{{ section.id }}-{{ forloop.index }}" class="multicolumn-list__item grid__item{% if section.settings.swipe_on_mobile %} slider__slide{% endif %}{% if section.settings.column_alignment == 'center' %} center{% endif %}{{ empty_column }}" {{ block.shopify_attributes }}>            
             <div class="multicolumn-card content-container">
               {%- if block.settings.image != blank -%}
@@ -80,10 +83,11 @@
                       alt="{{ block.settings.image.alt }}"
                       height="{{ block.settings.image.height }}"
                       width="{{ block.settings.image.width }}"
-                      loading="lazy"
+                {% unless lazy_load == false %}loading="lazy"{% endunless %}
                     >
                   </div>
                 </div>
+               <a class="card-collection-url" {% if block.settings.link == blank %}role="link" aria-disabled="true"{% else %}href="{{ block.settings.link }}"{% endif %}></a>
               {%- endif -%}
               <div class="multicolumn-card__info">
                 {%- if block.settings.title != blank -%}

@@ -2963,10 +2963,6 @@ margin-top: 5px;
   .jdgm-write-rev-link {
     text-decoration: none;
   }
-  
-  .jdgm-histogram__percentage, .jdgm-histogram__frequency {
-    color: #000;
-  }
 
   @media screen and (min-width: 750px) {
   .jdgm-rev-widg.jdgm-rev-widg {

@@ -365,9 +365,16 @@ slider-component.slider-component-full-width {
 .slider-button--prev:not([disabled]):hover .icon {
   transform: rotate(90deg) scale(1.1);
 }
+
+  /* CUSTOM PRODUCT GALLERY SLIDER */
+
+.slider-counter {
+  display: none;
+}
   
  @media screen and (max-width: 749px) {
 .grid .slider.slider--mobile {
   column-gap: 0.5rem;
 }
  }
+

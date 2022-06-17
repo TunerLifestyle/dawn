@@ -367,40 +367,10 @@ slider-component.slider-component-full-width {
 }
 
   /* CUSTOM PRODUCT GALLERY SLIDER */
-.slider-buttons.no-js-hidden.quick-add-hidden {
-  display: none;
-position: absolute;
-top: 50%;
-width: 100%;
-z-index: 2;
+  
+ @media screen and (max-width: 749px) {
+.grid .grid--peek.slider--mobile {
+  column-gap: 0.5rem;
 }
+ }
 
-.slider-buttons.no-js-hidden.quick-add-hidden button.slider-button.slider-button--prev {
-position: absolute;
-left: 1rem;
-border-radius: 44px;
-background-color: #FFF;
-border: 0.1rem solid rgba(var(--color-foreground), 0.1);
-
-}
-
-.slider-buttons.no-js-hidden.quick-add-hidden button.slider-button.slider-button--next {
-position: absolute;
-right: 1rem;
-background: #FFF;
-border-radius: 44px;
-border: 0.1rem solid rgba(var(--color-foreground), 0.1);
-}
-
-.slider-counter {
-  display: none;
-}
-
-/* Don't show slider button when first or last child */
-.slider-buttons.no-js-hidden.quick-add-hidden button.slider-button.slider-button--prev:disabled {
-  display: none;
-}
-
-.slider-buttons.no-js-hidden.quick-add-hidden button.slider-button.slider-button--next:disabled {
-  display: none;
-}

@@ -373,7 +373,7 @@ slider-component.slider-component-full-width {
 }
   
  @media screen and (max-width: 749px) {
-.grid .slider.slider--mobile {
+.grid .grid--peek.slider--mobile {
   column-gap: 0.5rem;
 }
  }

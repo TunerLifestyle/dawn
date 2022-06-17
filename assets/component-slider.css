@@ -368,7 +368,7 @@ slider-component.slider-component-full-width {
 
   /* CUSTOM PRODUCT GALLERY SLIDER */
 
-.slider-counter {
+.slider-counter, .slider-buttons.no-js-hidden.quick-add-hidden {
   display: none;
 }
   

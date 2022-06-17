@@ -367,10 +367,6 @@ slider-component.slider-component-full-width {
 }
 
   /* CUSTOM PRODUCT GALLERY SLIDER */
-
-.slider-counter, .slider-buttons.no-js-hidden.quick-add-hidden {
-  display: none;
-}
   
  @media screen and (max-width: 749px) {
 .grid .grid--peek.slider--mobile {

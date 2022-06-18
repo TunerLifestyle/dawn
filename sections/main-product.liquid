@@ -220,6 +220,7 @@
               </a>
             </div>
           {%- when 'price' -%}
+        <div data-fera-container="487551" data-product_id="{{ product.id }}"></div>
             <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
               {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
             </div>

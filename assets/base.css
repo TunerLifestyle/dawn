@@ -2944,42 +2944,6 @@ details-disclosure > details {
   margin-top: 0.5rem !important;
   float: right !important;
 }
-  .jdgm-rev-widg__summary {
-    margin-bottom: 1rem !important;
-  }
-  
-  .jdgm-rev__timestamp {
-  float: right !important;
-  font-size: 1.2rem;
-  }
-  
-  .jdgm-rev__icon::after, .jdgm-rev__buyer-badge, .jdgm-rev__icon {
-  display: none !important;
-}
-  
-  .jdgm-rev__buyer-badge-wrapper:after {
-content: 'Verified';
-display: inline-block;
-padding: 0.2rem 0.7rem;
-font-size: 1.1rem;
-background-color: rgb(68, 68, 68);
-color: #ffffff;
-margin-top: 5px;
-      vertical-align: bottom;
-}
-  
-  .jdgm-write-rev-link {
-    text-decoration: none;
-  }
-
-  @media screen and (min-width: 750px) {
-  .jdgm-rev-widg.jdgm-rev-widg {
-    margin-top: 5rem;
-    }
-    .jdgm-rev-widg__title {
-      font-size: 1.8rem;
-}
-  }
   
   
     

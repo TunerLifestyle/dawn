@@ -2947,3 +2947,7 @@ details-disclosure > details {
   .reviews-fera-modal .fera-productReviews.fera-productReviews--list .fera-productReviews-body .fera-productReviews-reviews .fera-productReviews-review .fera-productReviews-review-customer-avatar-col .fera-productReviews-review-customer-verification {
     display: none !important;
   }
+
+  span.fera-productReviews-review-customer-verification {
+    display: none;
+  }

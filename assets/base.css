@@ -2944,7 +2944,8 @@ details-disclosure > details {
   margin-top: 0.5rem !important;
   float: right !important;
 }
-  .reviews-fera-modal .fera-productReviews.fera-productReviews--list .fera-productReviews-body .fera-productReviews-reviews .fera-productReviews-review .fera-productReviews-review-customer-avatar-col .fera-productReviews-review-customer-verification {
+  
+  .fera-verified {
     display: none !important;
   }
   

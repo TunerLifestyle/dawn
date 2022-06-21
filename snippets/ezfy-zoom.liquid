@@ -2292,6 +2292,10 @@ ezfyDawnThemeZoom = (function() {
           setTimeout(() => {
             $close.classList.remove(`ezfy-lightbox--block`)
           }, 100)
+        
+        });
+
+      if (/iPhone|iPad|iPod/i.test(window.navigator.userAgent)) {
 // Added body scroll lock to prevent pswp from going crazy on iOS 15
       const targetElement = document.querySelector('#ezfyLightbox');
 bodyScrollLock.disableBodyScroll(targetElement);
@@ -2302,9 +2306,6 @@ bodyScrollLock.disableBodyScroll(targetElement);
 bodyScrollLock.enableBodyScroll(targetElement);
   });
     }
-        });
-
-
         gallery.listen('mouseUsed', function() {
 
           console.log("mouse")

@@ -2295,7 +2295,6 @@ ezfyDawnThemeZoom = (function() {
         
         });
 
-      if (/iPhone|iPad|iPod/i.test(window.navigator.userAgent)) {
 // Added body scroll lock to prevent pswp from going crazy on iOS 15
       const targetElement = document.querySelector('#pswp__container');
 bodyScrollLock.disableBodyScroll(targetElement);
@@ -2305,7 +2304,6 @@ bodyScrollLock.disableBodyScroll(targetElement);
   gallery.listen('destroy', () => {
 bodyScrollLock.enableBodyScroll(targetElement);
   });
-    }
         gallery.listen('mouseUsed', function() {
 
           console.log("mouse")

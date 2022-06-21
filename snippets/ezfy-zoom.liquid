@@ -2300,7 +2300,14 @@ ezfyDawnThemeZoom = (function() {
           console.log("mouse")
         });
 
+      const targetElement = document.querySelector('#ezfyLightbox');
+bodyScrollLock.disableBodyScroll(targetElement);
 
+      
+      // Try to remove scroll lock when exiting
+  gallery.listen('destroy', () => {
+bodyScrollLock.enableBodyScroll(targetElement);
+  });
       };
 
 

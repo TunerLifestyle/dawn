@@ -1,5 +1,34 @@
 <style> 
-  @font-face {
+
+@font-face {
+    font-family: 'GothamSSm';
+    src: url({{ 'GothamSSm-Book.woff2' | asset_url }}) format('woff2'),
+      url({{ 'GothamSSm-Book.woff' | asset_url }}) format('woff');
+    font-weight: 400;
+    font-style: normal;
+   font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'GothamSSm';
+    src: url({{ 'GothamSSm-Medium.woff2' | asset_url }}) format('woff2'),
+      url({{ 'GothamSSm-Medium.woff' | asset_url }}) format('woff');
+    font-weight: 600;
+    font-style: normal;
+     font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'GothamSSm';
+src: url({{ 'GothamSSm-Bold.woff2' | asset_url }}) format('woff2'),
+  url({{ 'GothamSSm-Bold.woff' | asset_url }}) format('woff');
+    font-weight: 700;
+    font-style: normal;
+     font-display: swap;
+}
+  /*@font-face {
     font-family: 'GothamSSm';
     src: url({{ 'Gotham-Book_Web.woff2' | asset_url }}) format('woff2');
     font-weight: 400;
@@ -23,5 +52,5 @@ src: url({{ 'Gotham-Bold_Web.woff2' | asset_url }}) format('woff2');
     font-weight: 700;
     font-style: normal;
      font-display: swap;
-}
+}*/
 </style>

@@ -1,3 +1,6 @@
+{% if template contains 'product' %}
+
+
 <div style="height:0;width:0;display:none"
      data_ezfy_zoom_type_mobile="{{ settings.ezfy_zoom_type_mobile }}"
      data_ezfy_zoom_type="{{ settings.ezfy_zoom_type }}"
@@ -2294,22 +2297,13 @@ ezfyDawnThemeZoom = (function() {
           }, 100)
         });
 
-            if (/iPhone|iPad|iPod/i.test(window.navigator.userAgent)) {
-// Added body scroll lock to prevent pswp from going crazy on iOS 15
-      const targetElement = document.querySelector('#ezfyLightbox');
-bodyScrollLock.disableBodyScroll(targetElement);
 
-      
-      // Try to remove scroll lock when exiting
-  gallery.listen('destroy', () => {
-bodyScrollLock.enableBodyScroll(targetElement);
-  });
-    }
         gallery.listen('mouseUsed', function() {
 
           console.log("mouse")
         });
-    
+
+
       };
 
 
@@ -2406,9 +2400,6 @@ bodyScrollLock.enableBodyScroll(targetElement);
 
     $thumbnail.click();
 
-
-
-
   }
 
   function updateMainImageOnMobile(position) {
@@ -2428,6 +2419,9 @@ bodyScrollLock.enableBodyScroll(targetElement);
     if ($slide) {
 
       setTimeout(() => {
+        const scrollY = window.pageYOffset;
+
+
         const $parent = $slide.closest("ul");
         $parent.style.scrollBehavior = 'unset';
         $slide.scrollIntoView({
@@ -2435,6 +2429,8 @@ bodyScrollLock.enableBodyScroll(targetElement);
         });
         console.log("finishe", position);
         $parent.style.scrollBehavior = 'smooth';
+
+        window.scrollTo(0, scrollY);
       }, 10);
 
 
@@ -2555,3 +2551,5 @@ bodyScrollLock.enableBodyScroll(targetElement);
 
 
 ezfyDawnThemeZoom.init();</script>
+        
+{% endif %}

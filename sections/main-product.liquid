@@ -385,7 +385,7 @@
                         {% assign variant_needed = variant %}
                         {% endif %}
                         {% endfor %}  
-
+{% assign file_extension = 'png' %}
             {% assign image_name = value | handle | append: '.' | append: file_extension %}
             {% assign swatch = images[image_name] %}
 

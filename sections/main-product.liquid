@@ -614,7 +614,7 @@
   }
 
     customShowVariant()
-    document.querySelector('input[type="hidden"][name="id"]').addEventListener('change', ()=>{
+    document.querySelector('legend[type="hidden"][name="id"]').addEventListener('change', ()=>{
           const input= document.querySelector('fieldset input:checked').nextSibling.nextSibling                                                                         
           document.querySelector('.selectedVariant').innerHTML= input.innerText
      });

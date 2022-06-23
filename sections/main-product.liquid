@@ -616,7 +616,7 @@
     customShowVariant()
     document.querySelector('input[type="hidden"][name="id"]').addEventListener('change', ()=>{
           const input= document.querySelector('fieldset input:checked').nextSibling.nextSibling                                                                         
-          document.querySelector('.selectedVariant').innerHTML= input.innerText
+          document.querySelector('.selectedVariant').innerHTML= input.textContent
      });
   </script>
 

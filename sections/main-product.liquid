@@ -606,33 +606,9 @@
         hiddenInput.value = event.currentTarget.value;
       });
     });
-      </script>
-<script>
-        window.addEventListener('DOMContentLoaded', (event) => {
-            let optionNames = "{{ section.settings.option_names }}"
-            optionNames = optionNames.replace(/ /g,'')
-            optionNames = optionNames.split(',')
-            // console.log(optionNames)
-            
-            {% assign testFile = 'test.png' | file_url %}
-            
-            const filesUrl = "{{ testFile | split: '/test.png' | first }}"
-            optionNames.forEach((option) => {
-                const selectField = document.querySelector(`select[name="options[${option}]"]`)
 
-                if (selectField) {
-                    selectField.style.display = 'none'
-                    
-                    if (selectField.closest('.select')) {
-                        selectField.closest('.select').classList.add('cleaned-select')
-                    }
-                    const label = selectField.closest('.select')?.previousElementSibling
-                    if (label) {
-                        label.innerHTML = `${option}: <b>${selectField.value}</b>`
-
-                }})})
     // Custom code to show selected option variant for colors //
- /*      const  label=document.querySelector("legend.form__label")
+       const  label=document.querySelector("legend.form__label")
    const customShowVariant=()=>{
        const input= document.querySelector('fieldset input:checked').nextSibling.nextSibling
         label.innerHTML+=` - <span class="selectedVariant">${input.innerText}</span>`
@@ -642,7 +618,7 @@
     document.querySelector('input[type="hidden"][name="id"]').addEventListener('change', ()=>{
           const input= document.querySelector('fieldset input:checked').nextSibling.nextSibling                                                                         
           document.querySelector('.selectedVariant').innerHTML= input.innerText
-     });*/
+     });
   </script>
 
   {%- liquid

@@ -610,7 +610,7 @@
        const  label=document.querySelector("legend.form__label")
    const customShowVariant=()=>{
        const input= document.querySelector('fieldset input:checked').nextSibling.nextSibling
-        label.innerHTML+=` - <span class="selectedVariant">${input.innerText}</span>`
+        legend.innerHTML+=` - <span class="selectedVariant">${input.innerText}</span>`
   }
 
     customShowVariant()

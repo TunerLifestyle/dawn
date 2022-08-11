@@ -163,22 +163,22 @@
           "footer-0": {
             "type": "link_list",
             "settings": {
-              "heading": "Quick links",
-              "menu": "footer"
+              "heading": "Customer Service",
+              "menu": "customer-service"
             }
           },
           "footer-1": {
             "type": "link_list",
             "settings": {
-              "heading": "Info",
-              "menu": "footer"
+              "heading": "Information",
+              "menu": "information"
             }
           },
           "footer-2": {
             "type": "text",
             "settings": {
-              "heading": "Our mission",
-              "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
+              "heading": "TunerLifestyle Store",
+              "subtext": "<p>Designed by car enthusiasts, for car enthusiasts!<\/p><p>Email: shop@tunerlifestyle.com<\/p>"
             }
           }
         },

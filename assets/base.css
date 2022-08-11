@@ -2956,3 +2956,9 @@ details-disclosure > details {
     outline: transparent solid 1px;
   }
 }
+
+/* ADDED BY TL */
+
+  .tl-reviews {
+  float: right !important;
+}

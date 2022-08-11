@@ -1,0 +1,125 @@
+{%- assign isBarCodeAvailable = false -%}
+{%- assign isValidGtinLength = false -%}
+{%- assign gtinString = "gtin" -%}
+{%- assign daysProductPriceValidUntil = 90 | times: 86400 %}
+
+{%- if product.selected_or_first_available_variant.barcode != blank -%}
+
+    {%- assign isBarCodeAvailable = true -%}
+
+    {%- assign gtinStringLength = product.selected_or_first_available_variant.barcode | size -%}
+
+    {%- if gtinStringLength == 8 or gtinStringLength == 12 or gtinStringLength == 13 or gtinStringLength == 14 -%}
+        {%- assign isValidGtinLength = true -%}
+        {%- assign gtinString = gtinString | append: gtinStringLength -%}
+    {%- endif -%}
+
+{%- endif -%}
+
+{%- capture product_json_ld -%}
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org/",
+        "@type": "Product",
+    {%- if isBarCodeAvailable and isValidGtinLength %}
+        "{{gtinString}}": "{{product.selected_or_first_available_variant.barcode}}",
+        "productId": "{{product.selected_or_first_available_variant.barcode}}",
+    {%- elsif isBarCodeAvailable %}
+        "productId": "{{product.selected_or_first_available_variant.barcode}}",
+        "mpn": "{{product.selected_or_first_available_variant.barcode}}",
+    {%- endif %}
+        "url": "{{ shop.url | append: '/products/' | append: product.handle }}",
+        "name": "{{ product.title }}",
+        "image": "https:{{ product.featured_image.src | img_url: "master" }}",
+        "description": "{{ product.description | strip_html }}",
+    {%- if collection_urls != blank %}
+        "category": [
+            {{ collection_urls }}
+        ],
+    {%- endif %}
+        "brand": {
+            "@type": "Brand",
+            "name": "{{ product.vendor | strip_newlines | strip_html | escape_once | replace: '\', '\\\\' }}"
+        },
+    {%- if product.selected_or_first_available_variant.sku != blank %}
+        "sku": "{{product.selected_or_first_available_variant.sku}}",
+        {%- if isBarCodeAvailable == false %}
+        "mpn": "{{product.selected_or_first_available_variant.sku}}",
+        {%- endif -%}
+    {%- endif -%}
+              {% if product.metafields.okendo.summaryData.reviewCount > 0 %}
+                "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "{{ product.metafields.okendo.summaryData.reviewAverageValue }}",
+                    "ratingCount": "{{ product.metafields.okendo.summaryData.reviewCount }}"
+                },
+            {% elsif product.metafields.okendo.ReviewCount > 0 %}
+                "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "{{ product.metafields.okendo.ReviewAverageValue }}",
+                    "ratingCount": "{{ product.metafields.okendo.ReviewCount }}"
+                },
+            {% endif %}
+        "offers": [
+    {%- assign variant = product.selected_variant -%}
+    {%- if variant %}
+            {
+                "@type": "Offer",
+            {%- if isBarCodeAvailable and isValidGtinLength %}
+                "{{gtinString}}": "{{variant.barcode}}",
+            {%- elsif isBarCodeAvailable %}
+                "mpn": "{{variant.barcode}}",
+            {%- endif %}
+                "priceCurrency": "{{ shop.currency }}",
+            {%- assign decimalValue = variant.price | modulo: 100 %}{% if decimalValue < 10 %}{% assign decimalValue = decimalValue | prepend: "0" %}{% endif %}
+                "price": "{{variant.price | divided_by: 100}}.{{decimalValue}}",
+                "priceValidUntil": "{{"now" | date: "%s" | plus: daysProductPriceValidUntil | date: "%Y-%m-%d"}}",
+                "availability": "https://schema.org/{% if variant.available %}InStock{% else %}OutOfStock{% endif %}",
+                "itemCondition": "https://schema.org/NewCondition",
+            {%- if variant.sku != blank %}
+                "sku": "{{ variant.sku }}",
+            {%- endif -%}
+            {%- if variant.title != "Default Title" %}
+                "name": "{{ variant.title | strip_newlines | strip_html | escape_once | replace: '\', '\\\\' }}",
+            {%- endif %}
+                "url": "{{ shop.url | append: variant.url }}",
+                "seller": {
+                    "@type": "Organization",
+                    "name": "{{ shop.name | strip_newlines | strip_html | escape_once | replace: '\', '\\\\' }}"
+                }
+            }
+    {%- else -%}
+    {%- for variant in product.variants -%}
+            {% if forloop.first == false %},{% endif %}
+            {
+                "@type": "Offer",
+            {%- if isBarCodeAvailable and isValidGtinLength %}
+                "{{gtinString}}": "{{variant.barcode}}",
+            {%- elsif isBarCodeAvailable %}
+                "mpn": "{{variant.barcode}}",
+            {%- endif %}
+                "priceCurrency": "{{ cart.currency.iso_code }}",
+            {%- assign decimalValue = variant.price | modulo: 100 %}{% if decimalValue < 10 %}{% assign decimalValue = decimalValue | prepend: "0" %}{% endif %}
+                "price": "{{variant.price | divided_by: 100}}.{{decimalValue}}",
+                "priceValidUntil": "{{"now" | date: "%s" | plus: daysProductPriceValidUntil | date: "%Y-%m-%d"}}",
+                "availability": "https://schema.org/{% if variant.available %}InStock{% else %}OutOfStock{% endif %}",
+                "itemCondition": "https://schema.org/NewCondition",
+            {%- if variant.sku != blank %}
+                "sku": "{{ variant.sku }}",
+            {%- endif -%}
+            {%- if variant.title != "Default Title" %}
+                "name": "{{ variant.title | strip_newlines | strip_html | escape_once | replace: '\', '\\\\' }}",
+            {%- endif %}
+                "url": "{{ shop.url | append: variant.url }}",
+                "seller": {
+                    "@type": "Organization",
+                    "name": "{{ shop.name | strip_newlines | strip_html | escape_once | replace: '\', '\\\\' }}"
+                }
+            }
+    {%- endfor %}
+    {%- endif -%}
+        ]
+    }
+</script>
+{%- endcapture %}
+{{ product_json_ld }}

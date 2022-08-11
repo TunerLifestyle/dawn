@@ -15,6 +15,7 @@
         "166021418218285808-0"
       ],
       "settings": {
+        "image": "{{ collection.metafields.my_fields.collection_banner.value }}",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "adapt_height_first_image": true,

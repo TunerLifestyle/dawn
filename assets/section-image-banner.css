@@ -436,3 +436,8 @@
 .banner__box > * + .banner__buttons {
   margin-top: 2rem;
 }
+
+/* Added by TL */
+.banner__heading {
+  text-transform: uppercase;
+}

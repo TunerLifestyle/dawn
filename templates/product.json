@@ -78,6 +78,18 @@
     },
     "166025610046d85589": {
       "type": "apps",
+      "blocks": {
+        "b9d6d49d-ab1a-4205-a0f4-05e748c5ff3f": {
+          "type": "shopify:\/\/apps\/okendo-product-reviews-ugc\/blocks\/reviews-widget\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "{{product}}",
+            "widget_type": "reviews_widget"
+          }
+        }
+      },
+      "block_order": [
+        "b9d6d49d-ab1a-4205-a0f4-05e748c5ff3f"
+      ],
       "settings": {
         "include_margins": true
       }

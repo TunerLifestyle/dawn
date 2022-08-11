@@ -1,60 +1,88 @@
 {
   "sections": {
-    "1660182543ae3365a4": {
-      "type": "collection-list",
+    "16602483724230b5a1": {
+      "type": "multicolumn",
       "blocks": {
-        "16601825437d3c6a5b-0": {
-          "type": "featured_collection",
+        "1660248372a6130db9-0": {
+          "type": "column",
           "settings": {
-            "collection": "bride-backpacks"
+            "image": "shopify:\/\/shop_images\/racing-backpacks-jdm-bags-takata-bride-sparco-racing-harness-shoulder-straps-tunerlifestyle.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "shopify:\/\/collections\/bride-backpacks"
           }
         },
-        "16601825437d3c6a5b-1": {
-          "type": "featured_collection",
+        "1660248372a6130db9-1": {
+          "type": "column",
           "settings": {
-            "collection": "car-hoodies"
+            "image": "shopify:\/\/shop_images\/car-hoodies-jdm-clothing-automotive-apparel-tunerlifestyle.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "shopify:\/\/collections\/car-hoodies"
           }
         },
-        "16601825437d3c6a5b-2": {
-          "type": "featured_collection",
+        "1660248372a6130db9-2": {
+          "type": "column",
           "settings": {
-            "collection": "car-keychains"
+            "image": "shopify:\/\/shop_images\/car-keychains-collection-jdm-nos-turbo-fidgets-keyring-tunerlifestyle.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "shopify:\/\/collections\/car-keychains"
           }
         },
-        "1d649740-c94a-4438-a956-e4f16576f908": {
-          "type": "featured_collection",
+        "eef05ec0-83d7-4480-8756-34ff82e8d237": {
+          "type": "column",
           "settings": {
-            "collection": "car-air-fresheners"
+            "image": "shopify:\/\/shop_images\/car-air-fresheners-nos-turbocharger-tunerlifestyle.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "shopify:\/\/collections\/car-air-fresheners"
           }
         },
-        "b03ae7c3-096a-4f5a-ab99-090371a16c90": {
-          "type": "featured_collection",
+        "ac1bc8a5-280f-4b96-b0c6-cba64682a0ce": {
+          "type": "column",
           "settings": {
-            "collection": "car-t-shirts"
+            "image": "shopify:\/\/shop_images\/car-tshirts-jdm-clothing-automotive-apparel-tunerlifestyle.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "shopify:\/\/collections\/car-t-shirts"
           }
         },
-        "4cf083ff-ce7a-4601-b95d-8ffde5bc04bd": {
-          "type": "featured_collection",
+        "413ca589-d041-4ef8-b4d6-eb981947127c": {
+          "type": "column",
           "settings": {
-            "collection": "car-wallets"
+            "image": "shopify:\/\/shop_images\/car-wallets-jdm-racing-collection-bride-takata-tunerlifestyle.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "shopify:\/\/collections\/car-wallets"
           }
         }
       },
       "block_order": [
-        "16601825437d3c6a5b-0",
-        "16601825437d3c6a5b-1",
-        "16601825437d3c6a5b-2",
-        "1d649740-c94a-4438-a956-e4f16576f908",
-        "b03ae7c3-096a-4f5a-ab99-090371a16c90",
-        "4cf083ff-ce7a-4601-b95d-8ffde5bc04bd"
+        "1660248372a6130db9-0",
+        "1660248372a6130db9-1",
+        "1660248372a6130db9-2",
+        "eef05ec0-83d7-4480-8756-34ff82e8d237",
+        "ac1bc8a5-280f-4b96-b0c6-cba64682a0ce",
+        "413ca589-d041-4ef8-b4d6-eb981947127c"
       ],
       "settings": {
         "title": "",
         "heading_size": "h1",
+        "image_width": "full",
         "image_ratio": "adapt",
         "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
         "color_scheme": "background-1",
-        "show_view_all": false,
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 36,
@@ -64,13 +92,13 @@
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured products",
+        "title": "Best sellers",
         "heading_size": "h2",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "all",
-        "products_to_show": 8,
+        "collection": "best-sellers",
+        "products_to_show": 5,
         "columns_desktop": 5,
         "full_width": false,
         "show_view_all": true,
@@ -88,40 +116,56 @@
         "padding_bottom": 36
       }
     },
-    "166018267580f36d14": {
-      "type": "collection-list",
+    "1660248580429576f0": {
+      "type": "multicolumn",
       "blocks": {
-        "1660182675c56d4521-0": {
-          "type": "featured_collection",
+        "16602485800f73b37f-0": {
+          "type": "column",
           "settings": {
-            "collection": "car-phone-cases"
+            "image": "shopify:\/\/shop_images\/car-phone-cases-iphone-samsung-models-tunerlifestyle.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "shopify:\/\/collections\/car-phone-cases"
           }
         },
-        "1660182675c56d4521-1": {
-          "type": "featured_collection",
+        "16602485800f73b37f-2": {
+          "type": "column",
           "settings": {
-            "collection": "car-pillows"
+            "image": "shopify:\/\/shop_images\/car-pillows-collection-jdm-cushions-headrests-backrests-nos-turbo-tunerlifestyle.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "shopify:\/\/collections\/car-pillows"
           }
         },
-        "1660182675c56d4521-2": {
-          "type": "featured_collection",
+        "16602485800f73b37f-1": {
+          "type": "column",
           "settings": {
-            "collection": "airpods-cases"
+            "image": "shopify:\/\/shop_images\/jdm-airpods-engine-case-covers-tunerlifestyle.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "shopify:\/\/collections\/airpods-cases"
           }
         }
       },
       "block_order": [
-        "1660182675c56d4521-0",
-        "1660182675c56d4521-1",
-        "1660182675c56d4521-2"
+        "16602485800f73b37f-0",
+        "16602485800f73b37f-2",
+        "16602485800f73b37f-1"
       ],
       "settings": {
         "title": "",
         "heading_size": "h1",
+        "image_width": "full",
         "image_ratio": "adapt",
         "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
         "color_scheme": "background-1",
-        "show_view_all": false,
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 36,
@@ -130,8 +174,8 @@
     }
   },
   "order": [
-    "1660182543ae3365a4",
+    "16602483724230b5a1",
     "featured_collection",
-    "166018267580f36d14"
+    "1660248580429576f0"
   ]
 }

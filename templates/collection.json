@@ -1,10 +1,37 @@
 {
   "sections": {
+    "1660214182a6144c7a": {
+      "type": "image-banner",
+      "blocks": {
+        "166021418218285808-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "{{ collection.metafields.my_fields.collection_title.value }}",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "166021418218285808-0"
+      ],
+      "settings": {
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "adapt_height_first_image": true,
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false
+      }
+    },
     "banner": {
       "type": "main-collection-banner",
       "settings": {
         "show_collection_description": false,
-        "show_collection_image": true,
+        "show_collection_image": false,
         "color_scheme": "background-1"
       }
     },
@@ -28,6 +55,7 @@
     }
   },
   "order": [
+    "1660214182a6144c7a",
     "banner",
     "product-grid"
   ]

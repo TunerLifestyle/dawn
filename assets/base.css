@@ -2961,4 +2961,5 @@ details-disclosure > details {
 
   .tl-reviews {
   float: right !important;
+  margin: 0;
 }

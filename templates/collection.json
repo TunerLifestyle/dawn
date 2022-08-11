@@ -16,15 +16,15 @@
       ],
       "settings": {
         "image": "{{ collection.metafields.my_fields.collection_banner.value }}",
-        "image_overlay_opacity": 0,
-        "image_height": "medium",
+        "image_overlay_opacity": 30,
+        "image_height": "small",
         "adapt_height_first_image": true,
-        "desktop_content_position": "middle-center",
+        "desktop_content_position": "bottom-center",
         "show_text_box": false,
         "desktop_content_alignment": "center",
         "color_scheme": "background-1",
         "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
+        "stack_images_on_mobile": false,
         "show_text_below": false
       }
     },

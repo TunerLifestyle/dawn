@@ -37,7 +37,9 @@
       assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
       assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
     %}
-
+    
+    {%- render 'custom-fonts' -%}
+    
     {% style %}
       {{ settings.type_body_font | font_face: font_display: 'swap' }}
       {{ body_font_bold | font_face: font_display: 'swap' }}
@@ -219,8 +221,6 @@
     {% endstyle %}
     {{ 'base.css' | asset_url | stylesheet_tag }}
     
-    {%- render 'custom-fonts' -%}
-            
     {%- unless settings.type_body_font.system? -%}
       <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
     {%- endunless -%}

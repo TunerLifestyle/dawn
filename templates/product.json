@@ -34,6 +34,24 @@
           "type": "description",
           "settings": {
           }
+        },
+        "fc9ed59f-ed87-4ee5-9e01-434c629c2e2c": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Shipping",
+            "icon": "none",
+            "content": "",
+            "page": "{{ product.metafields.my_fields.shipping_products.value }}"
+          }
+        },
+        "6e8395d8-7cba-4238-b937-b809442c38f1": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Buy More & Save",
+            "icon": "none",
+            "content": "",
+            "page": "{{ product.metafields.my_fields.volume_discount.value }}"
+          }
         }
       },
       "block_order": [
@@ -42,7 +60,9 @@
         "variant_picker",
         "quantity_selector",
         "e248c6e6-9ae7-4b49-81d9-022482897aba",
-        "description"
+        "description",
+        "fc9ed59f-ed87-4ee5-9e01-434c629c2e2c",
+        "6e8395d8-7cba-4238-b937-b809442c38f1"
       ],
       "settings": {
         "enable_sticky_info": true,

@@ -120,6 +120,10 @@
     "favicon": "shopify:\/\/shop_images\/tunerlifestyle-favicon.png",
     "currency_code_enabled": false,
     "cart_type": "drawer",
+    "checkout_logo_image": "shopify:\/\/shop_images\/tunerlifestyle-logo-black.png",
+    "checkout_logo_position": "center",
+    "checkout_accent_color": "#008190",
+    "checkout_button_color": "#008190",
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",

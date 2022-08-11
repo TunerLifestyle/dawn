@@ -1,7 +1,69 @@
 {
   "sections": {
+    "1660249094d47a304e": {
+      "type": "collection-list",
+      "blocks": {
+        "1660249094c7a3a783-0": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "bride-backpacks"
+          }
+        },
+        "1660249094c7a3a783-1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "car-hoodies"
+          }
+        },
+        "1660249094c7a3a783-2": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "car-keychains"
+          }
+        },
+        "50d93ca5-98c2-46f3-8c05-fc83835b7e69": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "car-air-fresheners"
+          }
+        },
+        "685fb3cc-8b88-441d-a051-9ccd30f42f30": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "car-t-shirts"
+          }
+        },
+        "e3d7c9cf-ff52-4111-9937-054d82f6bc06": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "car-wallets"
+          }
+        }
+      },
+      "block_order": [
+        "1660249094c7a3a783-0",
+        "1660249094c7a3a783-1",
+        "1660249094c7a3a783-2",
+        "50d93ca5-98c2-46f3-8c05-fc83835b7e69",
+        "685fb3cc-8b88-441d-a051-9ccd30f42f30",
+        "e3d7c9cf-ff52-4111-9937-054d82f6bc06"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "color_scheme": "background-1",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "16602483724230b5a1": {
       "type": "multicolumn",
+      "disabled": true,
       "blocks": {
         "1660248372a6130db9-0": {
           "type": "column",
@@ -116,8 +178,49 @@
         "padding_bottom": 36
       }
     },
+    "16602491898e188866": {
+      "type": "collection-list",
+      "blocks": {
+        "166024918921438250-0": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "car-phone-cases"
+          }
+        },
+        "166024918921438250-1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "car-pillows"
+          }
+        },
+        "166024918921438250-2": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "airpods-cases"
+          }
+        }
+      },
+      "block_order": [
+        "166024918921438250-0",
+        "166024918921438250-1",
+        "166024918921438250-2"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "color_scheme": "background-1",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "1660248580429576f0": {
       "type": "multicolumn",
+      "disabled": true,
       "blocks": {
         "16602485800f73b37f-0": {
           "type": "column",
@@ -174,8 +277,10 @@
     }
   },
   "order": [
+    "1660249094d47a304e",
     "16602483724230b5a1",
     "featured_collection",
+    "16602491898e188866",
     "1660248580429576f0"
   ]
 }

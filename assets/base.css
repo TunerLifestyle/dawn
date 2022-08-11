@@ -540,7 +540,6 @@ blockquote {
   letter-spacing: 0.18rem;
 }
 
-.caption-large,
 .customer .field input,
 .customer select,
 .field__input,
@@ -550,6 +549,11 @@ blockquote {
   font-weight: 700;
   line-height: calc(1 + 0.5 / var(--font-body-scale));
   letter-spacing: 0;
+}
+
+.caption-large {
+  font-size: 1.3rem;
+  line-height: calc(1 + 0.5 / var(--font-body-scale));
 }
 
 .color-foreground {

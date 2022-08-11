@@ -87,3 +87,7 @@
   text-transform: uppercase;
   color: rgba(var(--color-foreground), 0.7);
 }
+/* ADDED BY TL */
+.price-item.price-item--sale.price-item--last {
+  color: #DC0019;
+}

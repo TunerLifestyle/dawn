@@ -78,12 +78,6 @@
   justify-content: center;
 }
 
-.price--on-sale .price-item--regular {
-  text-decoration: line-through;
-  color: rgba(var(--color-foreground), 0.75);
-  font-size: 1.3rem;
-}
-
 .unit-price {
   display: block;
   font-size: 1.1rem;

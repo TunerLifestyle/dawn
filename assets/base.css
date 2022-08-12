@@ -2254,6 +2254,11 @@ input[type='checkbox'] {
   grid-template-columns: 1fr 2fr 1fr;
   align-items: center;
 }
+    @media screen and (min-width: 990px) {
+    .header {
+      grid-template-columns: none;
+    }
+    }
 
 @media screen and (min-width: 990px) {
   .header--top-left,
@@ -2266,8 +2271,6 @@ input[type='checkbox'] {
 
   .header--middle-left {
     grid-template-areas: 'heading navigation icons';
-    grid-template-columns: auto auto 1fr;
-    column-gap: 2rem;
   }
 
   .header--middle-center {

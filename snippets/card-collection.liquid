@@ -86,8 +86,7 @@
         </div>   
       </div>
     </div>
-                <a{% if card_collection == blank %} role="link" aria-disabled="true"{% else %} href="{{ card_collection.url }}"{% endif %} class="card-collection-url">
-    {% if card_style == 'card' %} 
+    {% if card_style == 'card' or card_collection.featured_image %} 
       <div class="card__content">
         <div class="card__information">
           <h3 class="card__heading">

@@ -1216,3 +1216,7 @@ a.product__text {
   float: right;
   margin: 0;
 }
+
+.product-popup-modal__content-info table:not([class]) td {
+    padding: 0.5em;
+  }

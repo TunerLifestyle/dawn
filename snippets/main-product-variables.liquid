@@ -17,7 +17,7 @@
         "url": "{{ shop.url | append: '/products/' | append: product.handle }}",
         "name": "{{ product.title }}",
         "image": "https:{{ product.featured_image.src | img_url: "master" }}",
-        "description": "{{ product.description | strip_html }}",
+        "description": "{{ page_description | strip_html }}",
     {%- if collection_urls != blank %}
         "category": [
             {{ collection_urls }}

@@ -15,7 +15,6 @@
         },
         "5b26e4a7-dc22-4094-a648-9c629542d3a0": {
           "type": "popup",
-          "disabled": true,
           "settings": {
             "text": "Size Guide",
             "page": "{{ product.metafields.my_fields.size_guide.value }}"

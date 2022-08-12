@@ -65,11 +65,7 @@
     {%- if variant %}
             {
                 "@type": "Offer",
-            {%- if isBarCodeAvailable and isValidGtinLength %}
-                "{{gtinString}}": "{{variant.barcode}}",
-            {%- elsif isBarCodeAvailable %}
-                "mpn": "{{variant.barcode}}",
-            {%- endif %}
+                "mpn": "{{variant.sku}}",
                 "priceCurrency": "{{ shop.currency }}",
             {%- assign decimalValue = variant.price | modulo: 100 %}{% if decimalValue < 10 %}{% assign decimalValue = decimalValue | prepend: "0" %}{% endif %}
                 "price": "{{variant.price | divided_by: 100}}.{{decimalValue}}",
@@ -79,9 +75,6 @@
             {%- if variant.sku != blank %}
                 "sku": "{{ variant.sku }}",
             {%- endif -%}
-            {%- if variant.title != "Default Title" %}
-                "name": "{{ variant.title | strip_newlines | strip_html | escape_once | replace: '\', '\\\\' }}",
-            {%- endif %}
                 "url": "{{ shop.url | append: variant.url }}",
                 "seller": {
                     "@type": "Organization",
@@ -93,11 +86,7 @@
             {% if forloop.first == false %},{% endif %}
             {
                 "@type": "Offer",
-            {%- if isBarCodeAvailable and isValidGtinLength %}
-                "{{gtinString}}": "{{variant.barcode}}",
-            {%- elsif isBarCodeAvailable %}
-                "mpn": "{{variant.barcode}}",
-            {%- endif %}
+                "mpn": "{{variant.sku}}",
                 "priceCurrency": "{{ cart.currency.iso_code }}",
             {%- assign decimalValue = variant.price | modulo: 100 %}{% if decimalValue < 10 %}{% assign decimalValue = decimalValue | prepend: "0" %}{% endif %}
                 "price": "{{variant.price | divided_by: 100}}.{{decimalValue}}",
@@ -107,9 +96,6 @@
             {%- if variant.sku != blank %}
                 "sku": "{{ variant.sku }}",
             {%- endif -%}
-            {%- if variant.title != "Default Title" %}
-                "name": "{{ variant.title | strip_newlines | strip_html | escape_once | replace: '\', '\\\\' }}",
-            {%- endif %}
                 "url": "{{ shop.url | append: variant.url }}",
                 "seller": {
                     "@type": "Organization",

@@ -320,3 +320,8 @@ cart-remove-button .icon-remove {
     width: 60%;
   }
 }
+
+/* ADDED BY TL */
+.cart-item__discounted-prices {
+  margin-top: 0.5rem;
+}

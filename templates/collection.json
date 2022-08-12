@@ -7,7 +7,7 @@
           "type": "heading",
           "settings": {
             "heading": "{{ collection.metafields.my_fields.collection_title.value }}",
-            "heading_size": "h1"
+            "heading_size": "h0"
           }
         }
       },

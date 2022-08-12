@@ -440,4 +440,5 @@
 /* Added by TL */
 .banner__heading {
   text-transform: uppercase;
+  font-weight: 700;
 }

@@ -88,3 +88,7 @@
 .price-item.price-item--sale.price-item--last {
   color: #DC0019;
 }
+
+.predictive-search__item .price {
+  font-size: 1.4rem;
+}

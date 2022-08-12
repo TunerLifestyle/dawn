@@ -896,8 +896,6 @@ a.product__text {
 
 @media screen and (max-width: 749px) {
   .product-popup-modal__content table {
-    display: block;
-    max-width: fit-content;
     overflow-x: auto;
     white-space: nowrap;
     margin: 0;

@@ -514,3 +514,8 @@ noscript .localization-selector.link {
     }
   }
 }
+
+/* Added by TL */
+.footer-block__details-content.rte {
+    color: #FFFFFFBF;
+}

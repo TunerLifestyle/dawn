@@ -2612,8 +2612,7 @@ details[open] > .header__submenu {
 
 @media screen and (min-width: 990px) {
   .header__inline-menu {
-    display: flex;
-    justify-content: center;
+    display: block;
   }
 
   .header--top-center .header__inline-menu {
@@ -2636,7 +2635,7 @@ details[open] > .header__submenu {
 .header__menu-item {
   padding: 1.2rem;
   text-decoration: none;
-  color: rgba(var(--color-foreground), 1);
+  color: rgba(var(--color-foreground), 0.75);
 }
 
 .header__menu-item:hover {
@@ -2960,3 +2959,8 @@ details-disclosure > details {
     outline: transparent solid 1px;
   }
 }
+
+/* ADDED BY TL */
+  .banner--adapt, .banner--adapt_image.banner--mobile-bottom .banner__media:not(.placeholder) {
+    max-height: 30vh;
+  }

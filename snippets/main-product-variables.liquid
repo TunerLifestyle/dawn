@@ -1,18 +1,9 @@
 {%- assign isBarCodeAvailable = false -%}
-{%- assign isValidGtinLength = false -%}
-{%- assign gtinString = "gtin" -%}
 {%- assign daysProductPriceValidUntil = 90 | times: 86400 %}
 
 {%- if product.selected_or_first_available_variant.barcode != blank -%}
 
     {%- assign isBarCodeAvailable = true -%}
-
-    {%- assign gtinStringLength = product.selected_or_first_available_variant.barcode | size -%}
-
-    {%- if gtinStringLength == 8 or gtinStringLength == 12 or gtinStringLength == 13 or gtinStringLength == 14 -%}
-        {%- assign isValidGtinLength = true -%}
-        {%- assign gtinString = gtinString | append: gtinStringLength -%}
-    {%- endif -%}
 
 {%- endif -%}
 
@@ -21,13 +12,8 @@
     {
         "@context": "https://schema.org/",
         "@type": "Product",
-    {%- if isBarCodeAvailable and isValidGtinLength %}
-        "{{gtinString}}": "{{product.selected_or_first_available_variant.barcode}}",
-        "productId": "{{product.selected_or_first_available_variant.barcode}}",
-    {%- elsif isBarCodeAvailable %}
         "productId": "{{product.selected_or_first_available_variant.barcode}}",
         "mpn": "{{product.selected_or_first_available_variant.barcode}}",
-    {%- endif %}
         "url": "{{ shop.url | append: '/products/' | append: product.handle }}",
         "name": "{{ product.title }}",
         "image": "https:{{ product.featured_image.src | img_url: "master" }}",

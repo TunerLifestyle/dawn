@@ -311,13 +311,3 @@
 .card-article-info {
   margin-top: 1rem;
 }
-
-/* Added by TL */
-.card-collection-url {
-  display: block;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}

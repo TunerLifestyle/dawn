@@ -2,6 +2,7 @@
   "sections": {
     "1660249094d47a304e": {
       "type": "collection-list",
+      "disabled": true,
       "blocks": {
         "1660249094c7a3a783-0": {
           "type": "featured_collection",
@@ -63,7 +64,6 @@
     },
     "16602483724230b5a1": {
       "type": "multicolumn",
-      "disabled": true,
       "blocks": {
         "1660248372a6130db9-0": {
           "type": "column",
@@ -180,6 +180,7 @@
     },
     "16602491898e188866": {
       "type": "collection-list",
+      "disabled": true,
       "blocks": {
         "166024918921438250-0": {
           "type": "featured_collection",
@@ -220,7 +221,6 @@
     },
     "1660248580429576f0": {
       "type": "multicolumn",
-      "disabled": true,
       "blocks": {
         "16602485800f73b37f-0": {
           "type": "column",

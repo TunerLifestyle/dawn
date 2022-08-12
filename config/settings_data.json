@@ -127,7 +127,7 @@
         "type": "header",
         "settings": {
           "color_scheme": "background-2",
-          "logo": "shopify:\/\/shop_images\/tunerlifestyle-mobile-logo.png",
+          "logo": "shopify:\/\/shop_images\/tunerlifestyle-logo-white.png",
           "logo_width": 100,
           "logo_position": "middle-left",
           "menu": "main-menu",
@@ -166,7 +166,6 @@
           "2cbf8abf-93a6-4884-ae76-c901bab10bf7": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/tunerlifestyle-mobile-logo.png",
               "image_width": 100,
               "alignment": "center"
             }
@@ -207,15 +206,7 @@
     },
     "content_for_index": [
 
-    ],
-    "blocks": {
-      "14060646107696862457": {
-        "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/judgeme_core\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-        "disabled": true,
-        "settings": {
-        }
-      }
-    }
+    ]
   },
   "presets": {
     "Default": {

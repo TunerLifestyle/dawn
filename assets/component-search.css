@@ -32,3 +32,7 @@
 input::-webkit-search-decoration {
   -webkit-appearance: none;
 }
+
+.search__input .field:after {
+  border: 1px solid #000;
+}

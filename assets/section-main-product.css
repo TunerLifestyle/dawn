@@ -1210,3 +1210,8 @@ a.product__text {
   float: right !important;
   margin: 0;
 }
+
+.size-chart {
+  float: right;
+  margin: 0;
+}

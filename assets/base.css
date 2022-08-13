@@ -2974,7 +2974,7 @@ details-disclosure > details {
     max-height: 30vh;
   }
 
-.product-form__input input[type="radio"] + .color-swatch {
+.product-form__input input[type="radio"] + .color-swatch, .product-form__input input[type="radio"]:hover + .color-swatch {
   border: 3px solid #fff; /* Change this hex code to change the color of the non-active/non-selected variant */
   border-radius: 100%;
   box-shadow: 0 0 0 1px #e8e8e1;

@@ -1044,8 +1044,10 @@
         hiddenInput.value = event.currentTarget.value;
       });
     });
-
-        // Custom code to show selected option variant for colors //
+  </script>
+                                              {% if option.name == "Color" %}
+<script>
+                              // Custom code to show selected option variant for colors //
        const label=document.querySelector("legend.form__label")
    const customShowVariant=()=>{
        const input= document.querySelector('fieldset input:checked').nextSibling.nextSibling
@@ -1057,9 +1059,8 @@
           const input= document.querySelector('fieldset input:checked').nextSibling.nextSibling                                                                         
           document.querySelector('.selectedVariant').innerHTML= input.textContent
      });
-    
-  </script>
-
+</script>
+{% endif %}
 {%- render 'main-product-variables' -%}
 
 </section>

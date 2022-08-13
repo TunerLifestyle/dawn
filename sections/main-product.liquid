@@ -1041,15 +1041,15 @@
     });
 
     // Custom code to show selected option variant for colors //
-       const label=document.querySelector("legend.form__label")
+       const label = document.querySelector("legend.form__label")
       if (label !== null) {
    const customShowVariant=()=>{
-       const input= document.querySelector('fieldset input:checked').nextSibling.nextSibling
+       const input = document.querySelector('fieldset input:checked').nextSibling.nextSibling
         label.innerHTML+=` - <span class="selectedVariant">${input.textContent}</span>`
   }
     customShowVariant()
     document.querySelector('input[type="hidden"][name="id"]').addEventListener('change', ()=>{
-          const input= document.querySelector('fieldset input:checked').nextSibling.nextSibling                                                                         
+          const input = document.querySelector('fieldset input:checked').nextSibling.nextSibling                                                                         
           document.querySelector('.selectedVariant').innerHTML= input.textContent
      });
         }

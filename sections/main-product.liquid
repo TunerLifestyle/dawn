@@ -500,7 +500,7 @@
             assign color_image = color_file_name | file_img_url: '50x50' | prepend: 'https:' | split: '?' | first
             assign color_swatch_fallback = value | split: ' ' | last | handle
           -%}
-          <label class="color-swatch" for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" data-option="{{ value }}" style={% if images[color_file_name] != blank %}  "background-image: url({{ color_image }}); background-color: {{ color_swatch_fallback }};{% endif %}"
+          <label class="color-swatch" for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" data-option="{{ value }}" style="background-color: {{ color_swatch_fallback }};{% if images[color_file_name] != blank %}  background-image: url({{ color_image }});{% endif %}"
           >
             {{ value | escape }}
                         </label>

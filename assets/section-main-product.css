@@ -1214,3 +1214,7 @@ a.product__text {
 .product-popup-modal__content-info table:not([class]) td {
     padding: 0.5em;
   }
+
+.selectedVariant {
+  font-weight: 400;
+}

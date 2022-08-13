@@ -474,10 +474,15 @@
                     {%- for option in product.options_with_values -%}
                       <fieldset class="js product-form__input">
                         <legend class="form__label">{{ option.name }}</legend>
-                                                                                              {% if option.name == "Color" %}
-                                                <span class="variant__label-info"> 
-                                                &mdash;
-                                                <span> {{ option.selected_value }} </span>
+                         {% if option.name == "Color" %}
+                          <span class="variant__label-info"> 
+                          &mdash;
+         <span
+          data-variant-color-label
+          data-index="{{ forloop.index0 }}"
+          data-option-index="{{ color_option_index }}">
+          {{ option.selected_value }}
+        </span>                                                                
                                                 {% endif %}
                         {%- for value in option.values -%}
                           <input
@@ -1043,6 +1048,20 @@
         hiddenInput.value = event.currentTarget.value;
       });
     });
+
+    // Custom code to show selected option variant for colors //
+       const label=document.querySelector("legend.form__label")
+   const customShowVariant=()=>{
+       const input= document.querySelector('fieldset input:checked').nextSibling.nextSibling
+        label.innerHTML+=` - <span class="selectedVariant">${input.textContent}</span>`
+  }
+
+    customShowVariant()
+    document.querySelector('input[type="hidden"][name="id"]').addEventListener('change', ()=>{
+          const input= document.querySelector('fieldset input:checked').nextSibling.nextSibling                                                                         
+          document.querySelector('.selectedVariant').innerHTML= input.textContent
+     });
+    
   </script>
 {%- render 'main-product-variables' -%}
 

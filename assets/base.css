@@ -3003,3 +3003,7 @@ details-disclosure > details {
   border: 3px solid #ccd1d1; /* Change this hex code to change the color of the active/selected variant */
   background: none;
 }
+
+.color-swatch {
+  text-indent: -9999px;
+}

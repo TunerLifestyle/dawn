@@ -1049,8 +1049,8 @@
         label.innerHTML+=` - <span class="selectedVariant">${input.textContent}</span>`
   }
     } else {
-      return;
-
+  console.log('⛔️ Element does NOT exist in DOM');
+    }
     customShowVariant()
     document.querySelector('input[type="hidden"][name="id"]').addEventListener('change', ()=>{
           const input= document.querySelector('fieldset input:checked').nextSibling.nextSibling                                                                         

@@ -2977,19 +2977,15 @@ details-disclosure > details {
 .product-form__input input[type="radio"] + .color-swatch {
   border: 3px solid #fff; /* Change this hex code to change the color of the non-active/non-selected variant */
   border-radius: 100%;
+  box-shadow: 0 0 0 1px #e8e8e1;
   width: 40px;
   height: 40px;
   padding: 0;
-  color: #000;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
 }
 
 
-.product-form__input input[type="radio"]:checked + .color-swatch,
-.product-form__input input[type="radio"]:hover + .color-swatch {
-  border: 3px solid #000; /* Change this hex code to change the color of the active/selected variant */
+.product-form__input input[type="radio"]:checked + .color-swatch {
+  box-shadow: 0 0 0 2px #333; /* Change this hex code to change the color of the active/selected variant */
   background: none;
 }
 

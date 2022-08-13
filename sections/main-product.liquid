@@ -474,11 +474,6 @@
                     {%- for option in product.options_with_values -%}
                       <fieldset class="js product-form__input">
                         <legend class="form__label">{{ option.name }}</legend>
-                                              {% if option.name == "Color" %}
-                                                <span class="variant__label-info"> 
-                                                &mdash;
-                                                <span> {{ option.selected_value }} </span>
-                                                    {%- endif -%}
                         {%- for value in option.values -%}
                           <input
                             type="radio"
@@ -1046,9 +1041,9 @@
     });
 
         // Custom code to show selected option variant for colors //
-       const label=document.querySelector("js product-form__input")
+       const label=document.querySelector("legend.form__label")
    const customShowVariant=()=>{
-       const input= document.querySelector('variant-label__info').nextSibling.nextSibling
+       const input= document.querySelector('fieldset input:checked').nextSibling.nextSibling
         label.innerHTML+=` - <span class="selectedVariant">${input.textContent}</span>`
   }
 

@@ -2980,19 +2980,6 @@ details-disclosure > details {
   width: 40px;
   height: 40px;
   padding: 0;
-}
-
-.product-form__input input[type="radio"]:checked + .color-swatch,
-.product-form__input input[type="radio"]:hover + .color-swatch {
-  border: 3px solid #000; /* Change this hex code to change the color of the active/selected variant */
-}
-
-.product-form__input input[type="radio"] + .swatch {
-  border: 3px solid #fff; /* Change this hex code to change the color of the non-active/non-selected variant */
-  border-radius: 100%;
-  width: 40px;
-  height: 40px;
-  padding: 0;
   color: #000;
   display: inline-flex;
   justify-content: center;
@@ -3000,9 +2987,9 @@ details-disclosure > details {
 }
 
 
-.product-form__input input[type="radio"]:checked + .swatch,
-.product-form__input input[type="radio"]:hover + .swatch {
-  border: 3px solid #ccd1d1; /* Change this hex code to change the color of the active/selected variant */
+.product-form__input input[type="radio"]:checked + .color-swatch,
+.product-form__input input[type="radio"]:hover + .color-swatch {
+  border: 3px solid #000; /* Change this hex code to change the color of the active/selected variant */
   background: none;
 }
 

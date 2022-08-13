@@ -494,7 +494,7 @@
                           
                         {% if option.name == "Color" %}
                           {% assign color_image = color_file_name | file_img_url: '50x50' | prepend: 'https:' | split: '?' | first %}
-                        <label class="color-swatch" for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" data-option="{{ value }}" style="background-color: { {color_image }}">
+                        <label class="color-swatch" for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" data-option="{{ value }}" style="background-image: url({{ color_image }});">
                           &nbsp
                         </label>
                         {% else %}

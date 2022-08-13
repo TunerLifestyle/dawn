@@ -474,6 +474,7 @@
                     {%- for option in product.options_with_values -%}
                       <fieldset class="js product-form__input">
                         <legend class="form__label">{{ option.name }}</legend>
+
                         {%- for value in option.values -%}
                           <input
                             type="radio"
@@ -1038,16 +1039,11 @@
         hiddenInput.value = event.currentTarget.value;
       });
     });
-    
-this.selectors = {
-variantColorSwatch: '.color-swatch'
-};
+
     // Custom code to show selected option variant for colors //
-    var swatches = this.selectors.variantColorSwatch;
-if (swatches.length) {
        const label=document.querySelector("legend.form__label")
    const customShowVariant=()=>{
-       const input= document.querySelector('.color-swatch').nextSibling.nextSibling
+       const input= document.querySelector('fieldset input:checked').nextSibling.nextSibling
         label.innerHTML+=` - <span class="selectedVariant">${input.textContent}</span>`
   }
 
@@ -1056,7 +1052,6 @@ if (swatches.length) {
           const input= document.querySelector('fieldset input:checked').nextSibling.nextSibling                                                                         
           document.querySelector('.selectedVariant').innerHTML= input.textContent
      });
-}
     
   </script>
 {%- render 'main-product-variables' -%}

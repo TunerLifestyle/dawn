@@ -2992,3 +2992,7 @@ details-disclosure > details {
 .color-swatch {
   text-indent: -9999px;
 }
+
+.okeReviews.oke-w {
+  max-width: 1500px !important;
+}

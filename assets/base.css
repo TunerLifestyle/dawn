@@ -3007,3 +3007,8 @@ details-disclosure > details {
 .color-swatch {
   text-indent: -9999px;
 }
+
+.product-form__input input[type=radio]+.color-swatch:before {
+  border: 3px solid;
+  border-color: #FFF;
+}

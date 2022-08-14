@@ -734,6 +734,7 @@
     "description": "{{ shop.description | strip_newlines | strip_html | escape_once | replace: '\', '\\\\' }}",
     {% if section.settings.logo %}
       "logo": {{ section.settings.logo | image_url: width: section.settings.logo.width | prepend: "https:" | json }},
+      "image": {{ section.settings.logo | image_url: width: section.settings.logo.width | prepend: "https:" | json }},
     {% endif %}
     "sameAs": [
       {{ settings.social_twitter_link | json }},

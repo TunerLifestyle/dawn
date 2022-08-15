@@ -2993,11 +2993,6 @@ details-disclosure > details {
   text-indent: -9999px;
 }
 
-  .tl-reviews {
-  float: right !important;
-  margin: 0;
-}
-
 .okeReviews.oke-w {
   max-width: 1500px !important;
 }

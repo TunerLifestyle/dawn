@@ -1201,6 +1201,11 @@ a.product__text {
 
 /* ADDED BY TL */
 
+  .tl-reviews {
+  float: right;
+  margin: 0;
+}
+
 .size-chart {
   float: right;
   margin: 0;

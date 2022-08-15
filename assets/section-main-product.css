@@ -1210,6 +1210,10 @@ a.product__text {
   line-height: 1 !important;
 }
 
+.okeReviews.oke-w {
+  padding: 2rem 0 !important;
+}
+
 .size-chart {
   float: right;
   margin: 0;

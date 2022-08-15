@@ -1207,7 +1207,7 @@ a.product__text {
 }
 
 .oke-sr {
-  line-height: 1;
+  line-height: 1 !important;
 }
 
 .size-chart {

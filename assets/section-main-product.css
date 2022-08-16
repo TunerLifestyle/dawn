@@ -1212,6 +1212,7 @@ a.product__text {
 
 .okeReviews.oke-w {
   padding: 2rem 0 !important;
+    max-width: 1400px !important;
 }
 
 .size-chart {

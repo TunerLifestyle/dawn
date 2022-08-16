@@ -1425,6 +1425,7 @@ button.shopify-payment-button__button--unbranded {
 .shopify-challenge__button,
 .customer button {
   font-size: 1.5rem;
+  font-weight: 500;
   letter-spacing: 0;
   line-height: calc(1 + 0.2 / var(--font-body-scale));
 }

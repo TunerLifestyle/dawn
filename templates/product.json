@@ -19,6 +19,12 @@
             "custom_liquid": "<hr>"
           }
         },
+        "575f1985-0d55-4fe1-9415-e2833bb0a41c": {
+          "type": "shopify:\/\/apps\/okendo-product-reviews-ugc\/blocks\/star-rating\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
         "5b26e4a7-dc22-4094-a648-9c629542d3a0": {
           "type": "popup",
           "settings": {
@@ -71,6 +77,7 @@
         "title",
         "price",
         "42091cd3-d5ea-484f-8c0c-9826af47ee79",
+        "575f1985-0d55-4fe1-9415-e2833bb0a41c",
         "5b26e4a7-dc22-4094-a648-9c629542d3a0",
         "variant_picker",
         "quantity_selector",

@@ -103,6 +103,7 @@
 
 .cart-item__final-price {
   font-weight: 400;
+  color: #dc0019;
 }
 
 .product-option {
@@ -190,10 +191,6 @@ cart-remove-button .icon-remove {
 
 .cart-item__error-text:empty + svg {
   display: none;
-}
-
-.product-option + .product-option {
-  margin-top: 0.4rem;
 }
 
 .product-option * {
@@ -322,4 +319,9 @@ cart-remove-button .icon-remove {
   .cart-items thead th:first-child {
     width: 60%;
   }
+}
+
+/* ADDED BY TL */
+.cart-item__discounted-prices {
+  margin-top: 0.5rem;
 }

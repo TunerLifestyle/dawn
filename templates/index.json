@@ -1,39 +1,40 @@
 {
   "sections": {
-    "1660182543ae3365a4": {
+    "1660249094d47a304e": {
       "type": "collection-list",
+      "disabled": true,
       "blocks": {
-        "16601825437d3c6a5b-0": {
+        "1660249094c7a3a783-0": {
           "type": "featured_collection",
           "settings": {
             "collection": "bride-backpacks"
           }
         },
-        "16601825437d3c6a5b-1": {
+        "1660249094c7a3a783-1": {
           "type": "featured_collection",
           "settings": {
             "collection": "car-hoodies"
           }
         },
-        "16601825437d3c6a5b-2": {
+        "1660249094c7a3a783-2": {
           "type": "featured_collection",
           "settings": {
             "collection": "car-keychains"
           }
         },
-        "1d649740-c94a-4438-a956-e4f16576f908": {
+        "50d93ca5-98c2-46f3-8c05-fc83835b7e69": {
           "type": "featured_collection",
           "settings": {
             "collection": "car-air-fresheners"
           }
         },
-        "b03ae7c3-096a-4f5a-ab99-090371a16c90": {
+        "685fb3cc-8b88-441d-a051-9ccd30f42f30": {
           "type": "featured_collection",
           "settings": {
             "collection": "car-t-shirts"
           }
         },
-        "4cf083ff-ce7a-4601-b95d-8ffde5bc04bd": {
+        "e3d7c9cf-ff52-4111-9937-054d82f6bc06": {
           "type": "featured_collection",
           "settings": {
             "collection": "car-wallets"
@@ -41,16 +42,16 @@
         }
       },
       "block_order": [
-        "16601825437d3c6a5b-0",
-        "16601825437d3c6a5b-1",
-        "16601825437d3c6a5b-2",
-        "1d649740-c94a-4438-a956-e4f16576f908",
-        "b03ae7c3-096a-4f5a-ab99-090371a16c90",
-        "4cf083ff-ce7a-4601-b95d-8ffde5bc04bd"
+        "1660249094c7a3a783-0",
+        "1660249094c7a3a783-1",
+        "1660249094c7a3a783-2",
+        "50d93ca5-98c2-46f3-8c05-fc83835b7e69",
+        "685fb3cc-8b88-441d-a051-9ccd30f42f30",
+        "e3d7c9cf-ff52-4111-9937-054d82f6bc06"
       ],
       "settings": {
         "title": "",
-        "heading_size": "h1",
+        "heading_size": "h2",
         "image_ratio": "adapt",
         "columns_desktop": 3,
         "color_scheme": "background-1",
@@ -61,16 +62,105 @@
         "padding_bottom": 36
       }
     },
+    "16602483724230b5a1": {
+      "type": "multicolumn",
+      "blocks": {
+        "1660248372a6130db9-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/racing-backpacks-jdm-bags-takata-bride-sparco-racing-harness-shoulder-straps-tunerlifestyle.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "shopify:\/\/collections\/bride-backpacks"
+          }
+        },
+        "1660248372a6130db9-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/car-hoodies-jdm-clothing-automotive-apparel-tunerlifestyle.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "shopify:\/\/collections\/car-hoodies"
+          }
+        },
+        "1660248372a6130db9-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/car-keychains-collection-jdm-nos-turbo-fidgets-keyring-tunerlifestyle.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "shopify:\/\/collections\/car-keychains"
+          }
+        },
+        "eef05ec0-83d7-4480-8756-34ff82e8d237": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/car-air-fresheners-nos-turbocharger-tunerlifestyle.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "shopify:\/\/collections\/car-air-fresheners"
+          }
+        },
+        "ac1bc8a5-280f-4b96-b0c6-cba64682a0ce": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/car-tshirts-jdm-clothing-automotive-apparel-tunerlifestyle.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "shopify:\/\/collections\/car-t-shirts"
+          }
+        },
+        "413ca589-d041-4ef8-b4d6-eb981947127c": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/car-wallets-jdm-racing-collection-bride-takata-tunerlifestyle.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "shopify:\/\/collections\/car-wallets"
+          }
+        }
+      },
+      "block_order": [
+        "1660248372a6130db9-0",
+        "1660248372a6130db9-1",
+        "1660248372a6130db9-2",
+        "eef05ec0-83d7-4480-8756-34ff82e8d237",
+        "ac1bc8a5-280f-4b96-b0c6-cba64682a0ce",
+        "413ca589-d041-4ef8-b4d6-eb981947127c"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured products",
+        "title": "Best sellers",
         "heading_size": "h2",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "all",
-        "products_to_show": 8,
+        "collection": "best-sellers",
+        "products_to_show": 5,
         "columns_desktop": 5,
         "full_width": false,
         "show_view_all": true,
@@ -88,22 +178,23 @@
         "padding_bottom": 36
       }
     },
-    "166018267580f36d14": {
+    "16602491898e188866": {
       "type": "collection-list",
+      "disabled": true,
       "blocks": {
-        "1660182675c56d4521-0": {
+        "166024918921438250-0": {
           "type": "featured_collection",
           "settings": {
             "collection": "car-phone-cases"
           }
         },
-        "1660182675c56d4521-1": {
+        "166024918921438250-1": {
           "type": "featured_collection",
           "settings": {
             "collection": "car-pillows"
           }
         },
-        "1660182675c56d4521-2": {
+        "166024918921438250-2": {
           "type": "featured_collection",
           "settings": {
             "collection": "airpods-cases"
@@ -111,9 +202,9 @@
         }
       },
       "block_order": [
-        "1660182675c56d4521-0",
-        "1660182675c56d4521-1",
-        "1660182675c56d4521-2"
+        "166024918921438250-0",
+        "166024918921438250-1",
+        "166024918921438250-2"
       ],
       "settings": {
         "title": "",
@@ -127,11 +218,69 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "1660248580429576f0": {
+      "type": "multicolumn",
+      "blocks": {
+        "16602485800f73b37f-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/car-phone-cases-iphone-samsung-models-tunerlifestyle.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "shopify:\/\/collections\/car-phone-cases"
+          }
+        },
+        "16602485800f73b37f-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/car-pillows-collection-jdm-cushions-headrests-backrests-nos-turbo-tunerlifestyle.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "shopify:\/\/collections\/car-pillows"
+          }
+        },
+        "16602485800f73b37f-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/jdm-airpods-engine-case-covers-tunerlifestyle.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "shopify:\/\/collections\/airpods-cases"
+          }
+        }
+      },
+      "block_order": [
+        "16602485800f73b37f-0",
+        "16602485800f73b37f-2",
+        "16602485800f73b37f-1"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
-    "1660182543ae3365a4",
+    "1660249094d47a304e",
+    "16602483724230b5a1",
     "featured_collection",
-    "166018267580f36d14"
+    "16602491898e188866",
+    "1660248580429576f0"
   ]
 }

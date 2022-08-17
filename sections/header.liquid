@@ -40,6 +40,9 @@
     header-drawer {
       display: none;
     }
+    .header__heading-logo {
+  max-width: 110px;
+  }
   }
 
   .menu-drawer-container {
@@ -307,7 +310,7 @@
               </svg>
             </span>
           </summary>
-          <div class="search-modal modal__content gradient" role="dialog" aria-modal="true" aria-label="{{ 'general.search.search' | t }}">
+          <div class="search-modal modal__content color-background-1 gradient" role="dialog" aria-modal="true" aria-label="{{ 'general.search.search' | t }}">
             <div class="modal-overlay"></div>
             <div class="search-modal__content{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} search-modal__content-top{% else %} search-modal__content-bottom{% endif %}" tabindex="-1">
               {%- if settings.predictive_search_enabled -%}
@@ -529,7 +532,7 @@
               </svg>
             </span>
           </summary>
-          <div class="search-modal modal__content gradient" role="dialog" aria-modal="true" aria-label="{{ 'general.search.search' | t }}">
+          <div class="search-modal modal__content color-background-1 gradient" role="dialog" aria-modal="true" aria-label="{{ 'general.search.search' | t }}">
             <div class="modal-overlay"></div>
             <div class="search-modal__content{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} search-modal__content-top{% else %} search-modal__content-bottom{% endif %}" tabindex="-1">
               {%- if settings.predictive_search_enabled -%}
@@ -723,13 +726,16 @@
   customElements.define('sticky-header', StickyHeader);
 {% endjavascript %}
 
+{%- if request.page_type == 'index' -%}
 <script type="application/ld+json">
   {
     "@context": "http://schema.org",
     "@type": "Organization",
     "name": {{ shop.name | json }},
+    "description": "{{ shop.description | strip_newlines | strip_html | escape_once | replace: '\', '\\\\' }}",
     {% if section.settings.logo %}
       "logo": {{ section.settings.logo | image_url: width: section.settings.logo.width | prepend: "https:" | json }},
+      "image": {{ section.settings.logo | image_url: width: section.settings.logo.width | prepend: "https:" | json }},
     {% endif %}
     "sameAs": [
       {{ settings.social_twitter_link | json }},
@@ -745,8 +751,6 @@
     "url": {{ request.origin | append: page.url | json }}
   }
 </script>
-
-{%- if request.page_type == 'index' -%}
   {% assign potential_action_target = request.origin | append: routes.search_url | append: "?q={search_term_string}" %}
   <script type="application/ld+json">
     {

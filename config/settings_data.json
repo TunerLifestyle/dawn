@@ -15,7 +15,7 @@
     "heading_scale": 100,
     "type_body_font": "assistant_n4",
     "body_scale": 100,
-    "page_width": 1200,
+    "page_width": 1400,
     "spacing_sections": 0,
     "spacing_grid_horizontal": 8,
     "spacing_grid_vertical": 8,
@@ -120,6 +120,10 @@
     "favicon": "shopify:\/\/shop_images\/tunerlifestyle-favicon.png",
     "currency_code_enabled": false,
     "cart_type": "drawer",
+    "checkout_logo_image": "shopify:\/\/shop_images\/tunerlifestyle-logo-black.png",
+    "checkout_logo_position": "center",
+    "checkout_accent_color": "#008190",
+    "checkout_button_color": "#008190",
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
@@ -145,16 +149,16 @@
         "settings": {
           "color_scheme": "accent-2",
           "logo": "shopify:\/\/shop_images\/tunerlifestyle-logo-white.png",
-          "logo_width": 70,
+          "logo_width": 60,
           "logo_position": "middle-left",
           "menu": "main-menu",
           "menu_type_desktop": "dropdown",
-          "show_line_separator": true,
+          "show_line_separator": false,
           "enable_sticky_header": true,
           "mobile_logo_position": "center",
           "margin_bottom": 0,
-          "padding_top": 0,
-          "padding_bottom": 0
+          "padding_top": 12,
+          "padding_bottom": 12
         }
       },
       "footer": {
@@ -196,8 +200,8 @@
           "enable_language_selector": false,
           "payment_enable": true,
           "margin_top": 48,
-          "padding_top": 36,
-          "padding_bottom": 36
+          "padding_top": 60,
+          "padding_bottom": 60
         }
       },
       "main-password-header": {
@@ -216,7 +220,16 @@
     },
     "content_for_index": [
 
-    ]
+    ],
+    "blocks": {
+      "733389323033596483": {
+        "type": "shopify:\/\/apps\/okendo-product-reviews-ugc\/blocks\/theme-settings\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+        "disabled": false,
+        "settings": {
+          "show_preview_data": true
+        }
+      }
+    }
   },
   "presets": {
     "Default": {

@@ -84,6 +84,7 @@
                     >
                   </div>
                 </div>
+              <a class="multicolumn-url" {% if block.settings.link == blank %}role="link" aria-disabled="true"{% else %}href="{{ block.settings.link }}"{% endif %}></a>
               {%- endif -%}
               <div class="multicolumn-card__info">
                 {%- if block.settings.title != blank -%}

@@ -20,7 +20,7 @@
       {{ page_title }}
       {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
       {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
-      {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
+      {%- unless page_title contains shop.name %} | {{ shop.name }}{% endunless -%}
     </title>
 
     {% if page_description %}
@@ -46,14 +46,14 @@
       {{ settings.type_header_font | font_face: font_display: 'swap' }}
 
       :root {
-        --font-body-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
+        --font-body-family: "HelveticaNow", {{ settings.type_body_font.fallback_families }};
         --font-body-style: {{ settings.type_body_font.style }};
         --font-body-weight: {{ settings.type_body_font.weight }};
         --font-body-weight-bold: {{ settings.type_body_font.weight | plus: 300 | at_most: 1000 }};
 
-        --font-heading-family: {{ settings.type_header_font.family }}, {{ settings.type_header_font.fallback_families }};
+        --font-heading-family: "HelveticaNow", {{ settings.type_header_font.fallback_families }};
         --font-heading-style: {{ settings.type_header_font.style }};
-        --font-heading-weight: {{ settings.type_header_font.weight }};
+        --font-heading-weight: 500;
 
         --font-body-scale: {{ settings.body_scale | divided_by: 100.0 }};
         --font-heading-scale: {{ settings.heading_scale | times: 1.0 | divided_by: settings.body_scale }};
@@ -201,23 +201,27 @@
         grid-template-columns: 100%;
         min-height: 100%;
         margin: 0;
-        font-size: 1.5rem;
-        letter-spacing: 0.06rem;
+        font-size: 1.4rem;
+        letter-spacing: 0;
         line-height: calc(1 + 0.8 / var(--font-body-scale));
         font-family: var(--font-body-family);
         font-style: var(--font-body-style);
         font-weight: var(--font-body-weight);
+        -webkit-font-smoothing:antialiased;
+        text-rendering:optimizeLegibility;
       }
 
       @media screen and (min-width: 750px) {
         body {
-          font-size: 1.6rem;
+          font-size: 1.5rem;
         }
       }
     {% endstyle %}
+    
+            {%- render 'custom-fonts' -%}
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
-
+    
     {%- unless settings.type_body_font.system? -%}
       <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
     {%- endunless -%}

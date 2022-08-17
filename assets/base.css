@@ -312,7 +312,7 @@ body,
 .color-inverse,
 .color-accent-1,
 .color-accent-2 {
-  color: rgba(var(--color-foreground), 0.75);
+  color: rgba(var(--color-foreground), 1);
   background-color: rgb(var(--color-background));
 }
 
@@ -390,7 +390,6 @@ body,
 
 .text-body {
   font-size: 1.5rem;
-  letter-spacing: 0.06rem;
   line-height: calc(1 + 0.8 / var(--font-body-scale));
   font-family: var(--font-body-family);
   font-style: var(--font-body-style);
@@ -411,65 +410,66 @@ h5,
   font-family: var(--font-heading-family);
   font-style: var(--font-heading-style);
   font-weight: var(--font-heading-weight);
-  letter-spacing: calc(var(--font-heading-scale) * 0.06rem);
+  text-transform: capitalize;
+  letter-spacing: -.01em;
   color: rgb(var(--color-foreground));
   line-height: calc(1 + 0.3 / max(1, var(--font-heading-scale)));
   word-break: break-word;
 }
 
 .hxl {
-  font-size: calc(var(--font-heading-scale) * 5rem);
+  font-size: calc(var(--font-heading-scale) * 2.4rem);
 }
 
 @media only screen and (min-width: 750px) {
   .hxl {
-    font-size: calc(var(--font-heading-scale) * 6.2rem);
+    font-size: calc(var(--font-heading-scale) * 3.6rem);
   }
 }
 
 .h0 {
-  font-size: calc(var(--font-heading-scale) * 4rem);
+  font-size: calc(var(--font-heading-scale) * 2.2rem);
 }
 
 @media only screen and (min-width: 750px) {
   .h0 {
-    font-size: calc(var(--font-heading-scale) * 5.2rem);
+    font-size: calc(var(--font-heading-scale) * 2.8rem);
   }
 }
 
 h1,
 .h1 {
-  font-size: calc(var(--font-heading-scale) * 3rem);
+  font-size: calc(var(--font-heading-scale) * 1.8rem);
 }
 
 @media only screen and (min-width: 750px) {
   h1,
   .h1 {
-    font-size: calc(var(--font-heading-scale) * 4rem);
+    font-size: calc(var(--font-heading-scale) * 2.2rem);
   }
 }
 
 h2,
 .h2 {
-  font-size: calc(var(--font-heading-scale) * 2rem);
+  font-size: calc(var(--font-heading-scale) * 1.8rem);
 }
 
 @media only screen and (min-width: 750px) {
   h2,
   .h2 {
-    font-size: calc(var(--font-heading-scale) * 2.4rem);
+    font-size: calc(var(--font-heading-scale) * 2.2rem);
   }
 }
 
 h3,
 .h3 {
-  font-size: calc(var(--font-heading-scale) * 1.7rem);
+  font-size: calc(var(--font-heading-scale) * 1.5rem);
 }
 
 @media only screen and (min-width: 750px) {
   h3,
   .h3 {
-    font-size: calc(var(--font-heading-scale) * 1.8rem);
+    font-size: calc(var(--font-heading-scale) * 1.6rem);
   }
 }
 
@@ -477,7 +477,14 @@ h4,
 .h4 {
   font-family: var(--font-heading-family);
   font-style: var(--font-heading-style);
-  font-size: calc(var(--font-heading-scale) * 1.5rem);
+  font-size: calc(var(--font-heading-scale) * 1.4rem);
+}
+
+@media only screen and (min-width: 750px) {
+  h4,
+  .h4 {
+    font-size: calc(var(--font-heading-scale) * 1.5rem);
+  }
 }
 
 h5,
@@ -514,7 +521,6 @@ blockquote {
 
 .caption {
   font-size: 1rem;
-  letter-spacing: 0.07rem;
   line-height: calc(1 + 0.7 / var(--font-body-scale));
 }
 
@@ -541,15 +547,20 @@ blockquote {
   letter-spacing: 0.18rem;
 }
 
-.caption-large,
 .customer .field input,
 .customer select,
 .field__input,
 .form__label,
 .select__select {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: calc(1 + 0.5 / var(--font-body-scale));
+  letter-spacing: 0;
+}
+
+.caption-large {
   font-size: 1.3rem;
   line-height: calc(1 + 0.5 / var(--font-body-scale));
-  letter-spacing: 0.04rem;
 }
 
 .color-foreground {
@@ -651,7 +662,7 @@ h6:empty {
   display: inline-flex;
   font-size: 1.4rem;
   font-weight: 600;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0;
   text-decoration: none;
   margin-bottom: 4.5rem;
   white-space: nowrap;
@@ -992,17 +1003,14 @@ summary::-webkit-details-marker {
 .subtitle {
   font-size: 1.8rem;
   line-height: calc(1 + 0.8 / var(--font-body-scale));
-  letter-spacing: 0.06rem;
   color: rgba(var(--color-foreground), 0.7);
 }
 
 .subtitle--small {
-  font-size: 1.4rem;
   letter-spacing: 0.1rem;
 }
 
 .subtitle--medium {
-  font-size: 1.6rem;
   letter-spacing: 0.08rem;
 }
 
@@ -1163,11 +1171,11 @@ summary::-webkit-details-marker {
   }
 
   .grid--peek.slider .grid__item:first-of-type {
-    margin-left: 1.5rem;
+    padding-left: 1.5rem;
   }
 
   .grid--peek.slider .grid__item:last-of-type {
-    margin-right: 1.5rem;
+    padding-right: 1.5rem;
   }
 
   .grid--2-col-tablet-down .grid__item {
@@ -1417,7 +1425,8 @@ button.shopify-payment-button__button--unbranded {
 .shopify-challenge__button,
 .customer button {
   font-size: 1.5rem;
-  letter-spacing: 0.1rem;
+  font-weight: 500;
+  letter-spacing: 0;
   line-height: calc(1 + 0.2 / var(--font-body-scale));
 }
 
@@ -1723,7 +1732,7 @@ details[open] > .share-button__fallback {
   font-family: var(--font-body-family);
   font-style: var(--font-body-style);
   font-weight: var(--font-body-weight);
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: rgba(var(--color-foreground), 0.75);
 }
 
@@ -1827,7 +1836,7 @@ details[open] > .share-button__fallback {
   transition: top var(--duration-short) ease,
     font-size var(--duration-short) ease;
   color: rgba(var(--color-foreground), 0.75);
-  letter-spacing: 0.1rem;
+  letter-spacing: 0;
   line-height: 1.5;
 }
 
@@ -1840,7 +1849,7 @@ details[open] > .share-button__fallback {
   font-size: 1rem;
   top: calc(var(--inputs-border-width) + 0.5rem);
   left: calc(var(--inputs-border-width) + 2rem);
-  letter-spacing: 0.04rem;
+  letter-spacing: 0;
 }
 
 .field__input:focus,
@@ -2160,15 +2169,15 @@ input[type='checkbox'] {
 
 .cart-count-bubble {
   position: absolute;
-  background-color: rgb(var(--color-button));
-  color: rgb(var(--color-button-text));
+  background-color: #008190;
+  color: #FFF;
   height: 1.7rem;
   width: 1.7rem;
   border-radius: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   bottom: 0.8rem;
   left: 2.2rem;
   line-height: calc(1 + 0.1 / var(--font-body-scale));
@@ -2211,7 +2220,7 @@ input[type='checkbox'] {
 .announcement-bar__message {
   padding: 1rem 0;
   margin: 0;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0;
 }
 
 /* section-header */
@@ -2253,6 +2262,11 @@ input[type='checkbox'] {
   grid-template-columns: 1fr 2fr 1fr;
   align-items: center;
 }
+    @media screen and (min-width: 990px) {
+    .header {
+      grid-template-columns: none;
+    }
+    }
 
 @media screen and (min-width: 990px) {
   .header--top-left,
@@ -2265,8 +2279,6 @@ input[type='checkbox'] {
 
   .header--middle-left {
     grid-template-areas: 'heading navigation icons';
-    grid-template-columns: auto auto 1fr;
-    column-gap: 2rem;
   }
 
   .header--middle-center {
@@ -2608,7 +2620,8 @@ details[open] > .header__submenu {
 
 @media screen and (min-width: 990px) {
   .header__inline-menu {
-    display: block;
+    display: flex;
+    justify-content: center;
   }
 
   .header--top-center .header__inline-menu {
@@ -2631,7 +2644,8 @@ details[open] > .header__submenu {
 .header__menu-item {
   padding: 1.2rem;
   text-decoration: none;
-  color: rgba(var(--color-foreground), 0.75);
+  color: rgba(var(--color-foreground), 1);
+  font-size: 1.5rem;
 }
 
 .header__menu-item:hover {
@@ -2756,7 +2770,7 @@ details-disclosure > details {
   border-radius: var(--badge-corner-radius);
   display: inline-block;
   font-size: 1.2rem;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0;
   line-height: 1;
   padding: 0.5rem 1.3rem 0.6rem 1.3rem;
   text-align: center;
@@ -2954,4 +2968,28 @@ details-disclosure > details {
   .localization-form__select:focus {
     outline: transparent solid 1px;
   }
+}
+
+/* ADDED BY TL */
+  .banner--adapt, .banner--adapt_image.banner--mobile-bottom .banner__media:not(.placeholder) {
+    max-height: 30vh;
+  }
+
+.product-form__input input[type="radio"] + .color-swatch, .product-form__input input[type="radio"]:hover + .color-swatch {
+  border: 3px solid #fff; /* Change this hex code to change the color of the non-active/non-selected variant */
+  border-radius: 100%;
+  box-shadow: 0 0 0 1px #e8e8e1;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+}
+
+
+.product-form__input input[type="radio"]:checked + .color-swatch {
+  box-shadow: 0 0 0 2px #333; /* Change this hex code to change the color of the active/selected variant */
+  background: none;
+}
+
+.color-swatch {
+  text-indent: -9999px;
 }

@@ -332,14 +332,30 @@
                 {%- endform -%}
               </div>
             {%- when 'description' -%}
-              {%- if product.description != blank -%}
-                <div class="product__description rte quick-add-hidden">
-                  {{ product.description }}
+          {%- when 'description' -%}
+            {%- if product.description != blank -%}
+            <div class="product__accordion accordion quick-add-hidden">
+              <details id="Details-product-description" open>
+                <summary>
+                  <div class="summary__title">
+                    <h2 class="h4 accordion__title">
+                      Description
+                    </h2>
+                  </div>
+                  {% render 'icon-caret' %}
+                </summary>
+                <div class="accordion__content rte" id="ProductAccordion-product-description">
+              <div class="product__description rte quick-add-hidden">
+                {{ product.description }}
+              </div>
                 </div>
-              {%- endif -%}
+              </details>
+        </div>
+            {%- endif -%}
             {%- when 'custom_liquid' -%}
               {{ block.settings.custom_liquid }}
             {%- when 'collapsible_tab' -%}
+                                {% unless block.settings.content == blank and block.settings.page.content == blank %}
               <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
                 <details id="Details-{{ block.id }}-{{ section.id }}">
                   <summary>
@@ -357,6 +373,7 @@
                   </div>
                 </details>
               </div>
+              {% endunless %}
             {%- when 'quantity_selector' -%}
               <div
                 class="product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}"
@@ -391,23 +408,15 @@
                 </quantity-input>
               </div>
             {%- when 'popup' -%}
-              <modal-opener
-                class="product-popup-modal__opener no-js-hidden quick-add-hidden"
-                data-modal="#PopupModal-{{ block.id }}"
-                {{ block.shopify_attributes }}
-              >
-                <button
-                  id="ProductPopup-{{ block.id }}"
-                  class="product-popup-modal__button link"
-                  type="button"
-                  aria-haspopup="dialog"
-                >
-                  {{ block.settings.text | default: block.settings.page.title }}
-                </button>
+        {% unless product.metafields.my_fields.size_guide == blank %}
+        <div class="size-chart">
+              <modal-opener class="product-popup-modal__opener no-js-hidden quick-add-hidden" data-modal="#PopupModal-{{ block.id }}" {{ block.shopify_attributes }}>
+                <button id="ProductPopup-{{ block.id }}" class="product-popup-modal__button link" type="button" aria-haspopup="dialog">{{ block.settings.text | default: block.settings.page.title }}</button>
               </modal-opener>
-              <a href="{{ block.settings.page.url }}" class="product-popup-modal__button link no-js">
-                {{- block.settings.text -}}
-              </a>
+                </div>
+              <a href="{{ block.settings.page.url }}" class="product-popup-modal__button link no-js">{{ block.settings.text }}</a>
+        </div>
+        {% endunless %}
             {%- when 'share' -%}
               <share-button
                 id="Share-{{ section.id }}"
@@ -452,7 +461,7 @@
               <script src="{{ 'share.js' | asset_url }}" defer="defer"></script>
             {%- when 'variant_picker' -%}
               {%- unless product.has_only_default_variant -%}
-                {%- if block.settings.picker_type == 'button' -%}
+              {%- if block.settings.picker_type == 'button' and product.metafields.my_fields.product_dropdown == blank -%}
                   <variant-radios
                     class="no-js-hidden"
                     data-section="{{ section.id }}"
@@ -462,6 +471,7 @@
                     {%- for option in product.options_with_values -%}
                       <fieldset class="js product-form__input">
                         <legend class="form__label">{{ option.name }}</legend>
+
                         {%- for value in option.values -%}
                           <input
                             type="radio"
@@ -473,9 +483,30 @@
                               checked
                             {% endif %}
                           >
-                          <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
-                            {{ value }}
-                          </label>
+{% assign variant_needed = null %}
+                        {% for variant in product.variants %}
+                        {% if variant.options contains value %}
+                        {% assign variant_needed = variant %}
+                        {% endif %}
+                        {% endfor %}  
+                          
+                        {% if option.name == "Color" %}
+          {%- liquid
+            assign swatch_file_extension = 'png'
+            assign color_file_name = value | handle | append: '.' | append: swatch_file_extension
+            assign color_image = color_file_name | file_img_url: '50x50' | prepend: 'https:' | split: '?' | first
+            assign color_swatch_fallback = value | split: ' ' | last | handle
+          -%}
+                          
+          <label class="color-swatch" for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" data-option="{{ value }}" style="background-color: {{ color_swatch_fallback }};{% if images[color_file_name] != blank %}  background-image: url({{ color_image }});{% endif %}"
+          >
+            {{ value | escape }}
+                        </label>
+                        {% else %}
+                        <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
+                          {{ value }}
+                        </label>
+                        {% endif %}
                         {%- endfor -%}
                       </fieldset>
                     {%- endfor -%}
@@ -1005,60 +1036,24 @@
         hiddenInput.value = event.currentTarget.value;
       });
     });
-  </script>
 
-  {%- liquid
-    if product.selected_or_first_available_variant.featured_media
-      assign seo_media = product.selected_or_first_available_variant.featured_media
-    else
-      assign seo_media = product.featured_media
-    endif
-  -%}
-
-  <script type="application/ld+json">
-    {
-      "@context": "http://schema.org/",
-      "@type": "Product",
-      "name": {{ product.title | json }},
-      "url": {{ request.origin | append: product.url | json }},
-      {% if seo_media -%}
-        "image": [
-          {{ seo_media | image_url: width: seo_media.preview_image.width | prepend: "https:" | json }}
-        ],
-      {%- endif %}
-      "description": {{ product.description | strip_html | json }},
-      {% if product.selected_or_first_available_variant.sku != blank -%}
-        "sku": {{ product.selected_or_first_available_variant.sku | json }},
-      {%- endif %}
-      "brand": {
-        "@type": "Brand",
-        "name": {{ product.vendor | json }}
-      },
-      "offers": [
-        {%- for variant in product.variants -%}
-          {
-            "@type" : "Offer",
-            {%- if variant.sku != blank -%}
-              "sku": {{ variant.sku | json }},
-            {%- endif -%}
-            {%- if variant.barcode.size == 12 -%}
-              "gtin12": {{ variant.barcode }},
-            {%- endif -%}
-            {%- if variant.barcode.size == 13 -%}
-              "gtin13": {{ variant.barcode }},
-            {%- endif -%}
-            {%- if variant.barcode.size == 14 -%}
-              "gtin14": {{ variant.barcode }},
-            {%- endif -%}
-            "availability" : "http://schema.org/{% if variant.available %}InStock{% else %}OutOfStock{% endif %}",
-            "price" : {{ variant.price | divided_by: 100.00 | json }},
-            "priceCurrency" : {{ cart.currency.iso_code | json }},
-            "url" : {{ request.origin | append: variant.url | json }}
-          }{% unless forloop.last %},{% endunless %}
-        {%- endfor -%}
-      ]
-    }
+    // Custom code to show selected option variant for colors //
+    const container = document.querySelector('.color-swatch')
+    if (container !== null) {
+       const label=document.querySelector("legend.form__label")
+   const customShowVariant=()=>{
+       const input= document.querySelector('fieldset input:checked').nextSibling.nextSibling
+        label.innerHTML+=` - <span class="selectedVariant">${input.textContent}</span>`
+  }
+    customShowVariant()
+    document.querySelector('input[type="hidden"][name="id"]').addEventListener('change', ()=>{
+          const input= document.querySelector('fieldset input:checked').nextSibling.nextSibling                                                                         
+          document.querySelector('.selectedVariant').innerHTML= input.textContent
+     });
+        }
   </script>
+{%- render 'main-product-variables' -%}
+
 </section>
 
 {% schema %}

@@ -436,8 +436,8 @@ noscript .localization-selector.link {
 
 @media screen and (max-width: 989px) {
   .footer-block__details-content .list-menu__item--link {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
   }
 }
 
@@ -513,4 +513,9 @@ noscript .localization-selector.link {
       padding-left: 3rem;
     }
   }
+}
+
+/* Added by TL */
+.footer-block__details-content.rte {
+    color: #FFFFFFBF;
 }

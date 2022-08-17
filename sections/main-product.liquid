@@ -47,6 +47,9 @@
     >
   {%- endif -%}
 
+{%- render 'breadcrumb' -%}
+{%- render 'main-product-variables' -%}
+
   <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
     <div class="grid__item product__media-wrapper{% if section.settings.media_position == 'right' %} medium-hide large-up-hide{% endif %}">
       <media-gallery
@@ -321,6 +324,9 @@
                 </a>
               </div>
             {%- when 'price' -%}
+                                <div class="tl-reviews">
+                  {% render 'okendo-reviews-product-rating-summary', product: product %}
+        </div>
               <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                 {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
               </div>
@@ -1052,8 +1058,7 @@
      });
         }
   </script>
-{%- render 'main-product-variables' -%}
-
+  
 </section>
 
 {% schema %}

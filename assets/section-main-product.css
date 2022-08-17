@@ -742,8 +742,7 @@ a.product__text {
 
 .product-media-modal__content > * {
   display: block;
-  height: 800px;
-  width: 800px;
+  height: auto;
   margin: auto;
 }
 

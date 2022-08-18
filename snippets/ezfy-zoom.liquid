@@ -20,7 +20,6 @@
     cursor: -moz-zoom-in; 
     cursor: -webkit-zoom-in; 
     cursor: zoom-in;
-
   }
 
   .FeaturedImage--block-lightbox *{
@@ -46,38 +45,8 @@
         width: 1.2rem;
     height: 1.4rem;
 }
-  
+
   [id] [id] .EzfyZoom-button{
-    
-    {% comment %}
-    padding: 0 !important;
-    background: white;
- 
-    cursor: -moz-zoom-in; 
-    cursor: -webkit-zoom-in; 
-    cursor: zoom-in;
-
-
-    z-index: 1;
-    opacity: 0;
-
-    background-color: rgb(var(--color-background));
-    border-radius: 50%;
-    border: 0.1rem solid rgba(var(--color-foreground),.1);
-    color: rgb(var(--color-foreground));
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 3rem;
-    width: 3rem;
-    position: absolute;
-	left: calc(0.4rem + var(--media-border-width));
-    top: calc(0.4rem + var(--media-border-width));
-    z-index: 1;
-    transition: color var(--duration-short) ease,opacity var(--duration-short) ease;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-      {% endcomment %}
-      
       position: absolute;
       left: 0;
       right: 0;
@@ -88,11 +57,7 @@
       opacity: 0;
       z-index: 1;
 }
-  
-  modal-opener:hover .EzfyZoom-button{
-/*   	opacity: 1 !important; */
-  }
-  
+
   .product__media-toggle{
   	pointer-events: none;
   }
@@ -117,14 +82,13 @@
   .EzfyZoom-button:focus{
       background: unset !important;
   }
-
+  
   /* PhotoSwipe general styles
   ================================ */
   
   #ezfyLightbox{
   	background: var(--gradient-background);
   }
-
 
   #ezfyLightbox .pswp__custom-controls{
     position: absolute;
@@ -171,12 +135,9 @@
     display: none;
   }
 
-
-
   .pswp__ui--hidden .pswp__custom-controls{
     transform: translateY(100px) !important;
   }
-
 
   #ezfyLightbox .pswp__custom-controls .pswp__button--close{
     width: 60px;
@@ -184,7 +145,6 @@
     margin-left: 25px;
     margin-right: 25px;
   }
-
 
   #ezfyLightbox .pswp__custom-controls .pswp__button--close svg{
     position: relative;
@@ -213,8 +173,6 @@
 /*   	display: none !important; */
     pointer-events: none;
   }
-
-
 </style>
 
 <div id="ezfyLightbox" class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
@@ -237,21 +195,12 @@
 
         <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
         <div class="pswp__ui pswp__ui--hidden">
-
             <div class="pswp__top-bar">
-
                 <!--  Controls are self-explanatory. Order can be changed. -->
-
                 <div class="pswp__counter"></div>
-
-          
-
                 <button class="pswp__button pswp__button--share" title="Share"></button>
-
                 <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-
                 <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
                 <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
                 <!-- element will get class pswp__preloader--active when preloader is running -->
                 <div class="pswp__preloader">
@@ -268,34 +217,25 @@
             </div>
           
  			<div class="pswp__custom-controls">
-
             <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
               <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-arrow-left" viewBox="0 0 284.49 498.98"><path d="M249.49 0a35 35 0 0 1 24.75 59.75L84.49 249.49l189.75 189.74a35.002 35.002 0 1 1-49.5 49.5L10.25 274.24a35 35 0 0 1 0-49.5L224.74 10.25A34.89 34.89 0 0 1 249.49 0z"></path></svg>
             </button>
-          
           <button class="pswp__button pswp__button--close" title="Close (Esc)">
 <svg xmlns="http://www.w3.org/2000/svg" id="Capa_1" enable-background="new 0 0 413.348 413.348" height="512" viewBox="0 0 413.348 413.348" width="512"><path d="m413.348 24.354-24.354-24.354-182.32 182.32-182.32-182.32-24.354 24.354 182.32 182.32-182.32 182.32 24.354 24.354 182.32-182.32 182.32 182.32 24.354-24.354-182.32-182.32z"/></svg>
               </button>
-
             <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
               <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-arrow-right" viewBox="0 0 284.49 498.98"><path d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"></path></svg>
             </button>
-              
           </div>
 
             <div class="pswp__caption">
                 <div class="pswp__caption__center"></div>
             </div>
-
         </div>
-
     </div>
-
 </div>
 
 <script>
-/*ezfyignore*/
-
       {% assign product_images = product.media | where: "media_type", "image" %}
 
       window.ezfyDawnThemeZoomImages = [
@@ -312,7 +252,6 @@
         ]
 </script>
 
-
 <script>
 window.ezfyDawnThemeZoom = window.ezfyDawnThemeZoom || {};
 
@@ -320,21 +259,17 @@ ezfyDawnThemeZoom = (function() {
 
   let IS_DAWN_SLIDER = false;
   const DELAY_AFTER_LOADING_PHOTO_SWIPE = 30;
-
   const CSS_PRODUCT_IMAGE_TAG = `slider-component modal-opener:not([class*='video']) .product__media > img`
   const CSS_PRODUCT_IMAGE_PARENT = `slider-component modal-opener:not([class*='video']) .product__media`
   const CSS_PARENT = `slider-component`;
-
   const CSS_THUMBNAIL_CLICKABLE = `.product-single__thumbnails > *:nth-child(REPLACE_INDEX) a, [class*='product-single__thumbnails'] > li:nth-child(REPLACE_INDEX) a`
   const CSS_INDIVIDUAL_SLIDE = `.product__media`
-
   const CSS_INDIVIDUAL_SLIDES_WITHOUT_VIDEO = `
                         slider-component li:not(.product__media-item--variant) > modal-opener:not([class*='video']) .product__media,
                         [id^='Slider-Gallery'] > li:not(.product__media-item--variant) > modal-opener:not([class*='video']) .product__media,
                         [id^='Slider-Gallery'] > [id]:nth-child(1) > modal-opener:not([class*='video']) .product__media,
                         [id*='Slider-Galler'][class*='Ezfy'] li:not(.product__media-item--variant) > modal-opener:not([class*='video']) .product__media, 
                         [id*='Slider-Galler'][class*='Ezfy']  > [id]:nth-child(1) > modal-opener:not([class*='video']) .product__media`
-
   const CLASS_INDIVIDUAL_SLIDE = [`product-single__photo`, ];
 
   function _isMobile() {
@@ -342,20 +277,13 @@ ezfyDawnThemeZoom = (function() {
   }
 
   const ZOOM_TYPE = (() => {
-
-
     if (_isMobile()) {
-
       let $el = document.querySelector(`[data_ezfy_zoom_type_mobile]`);
       return $el.getAttribute(`data_ezfy_zoom_type_mobile`);
     }
     let $el = document.querySelector(`[data_ezfy_zoom_type]`);
-
-
     return $el.getAttribute(`data_ezfy_zoom_type`);
   })();
-
-
 
   const options = {
     blockSlider: _getAttributeOption(`data_ezfy_zoom_block_slider`)
@@ -363,13 +291,10 @@ ezfyDawnThemeZoom = (function() {
 
   function _getAttributeOption(dataAttribute) {
     const element = document.querySelector(`[${dataAttribute}]`);
-
     if (!element) {
       return null;
     }
-
     const attr = element.getAttribute(dataAttribute);
-
     if (attr === 'true') {
       return true;
     } else if (attr === 'false') {
@@ -378,41 +303,27 @@ ezfyDawnThemeZoom = (function() {
       return attr;
     }
   }
-
-
-
+  
   const isDawnSliderInstalled = () => {
-
     const $slider = document.querySelector(`[data-ezfy-dawn-slider]`)
-
     if ($slider) {
       IS_DAWN_SLIDER = true;
       return true;
     }
-
-
     return false;
   }
 
-
   function detectCurrentLayout() {
     const $layout = document.querySelector(`[data-desktop-layout]`);
-
     if (!$layout) {
       return;
     }
-
     const layout = $layout.getAttribute(`data-desktop-layout`);
-
     return layout;
   }
 
-
-
   const CSS_PARENT_SELECTOR = `slider-component`
-
-
-
+  
   function _loadScript(src) {
     return new Promise(function(resolve, reject) {
       var s;
@@ -429,102 +340,64 @@ ezfyDawnThemeZoom = (function() {
   }
 
   function addImagePositionDataAttribute() {
-
     const $slides = document.querySelectorAll(CSS_INDIVIDUAL_SLIDES_WITHOUT_VIDEO);
-
-
-
     if (!$slides) {
       return;
     }
-
     for (var [i, each] of $slides.entries()) {
-
-
       const $parent = each.closest(`[id*='Slide-template'], li[data-media-id]`);
-
       let id;
-
       if ($parent.getAttribute("id")) {
         var _id = $parent.getAttribute("id")
         id = parseInt(_id.split("-")[4]);
-
       } else {
         _id = $parent.getAttribute("data-media-id")
         id = parseInt(_id.split("-")[3]);
       }
-
       if (id.length <= 0 || !id) {
         return;
       }
-
       const _position = window.ezfyDawnThemeZoomImages.filter(e => parseInt(e.id) === id)[0];
-
       if (!_position) {
         return;
       }
-
       const position = _position.imagePosition;
-
-
       const index = i;
-
       $parent.setAttribute("data-slide-index", index);
       $parent.setAttribute("data-ezfy-media-position", position);
-
     }
-
   }
 
   function addImagePositionDataAttributeToThumbnails() {
-
     const layout = detectCurrentLayout();
-
     if (!layout === 'thumbnails' || !layout === 'thumbnail_slider') {
       return;
     }
-
-
     const $thumbnails = document.querySelectorAll(`[id*='Slider-Thumbnails'] > li`);
-
-
     if (!$thumbnails) {
       return;
     }
-
-
-
     for (var [i, each] of $thumbnails.entries()) {
       const _id = each.getAttribute("data-target");
-
-
       const id = parseInt(_id.split("-")[3]);
 
       if (id.length <= 0 || !id) {
         return;
       }
-
       const _position = window.ezfyDawnThemeZoomImages.filter(e => parseInt(e.id) === id)[0];
-
       if (!_position) {
         return;
       }
-
       const position = _position.imagePosition;
-
-
       const index = i;
 
       each.setAttribute("data-slide-index", index);
       each.setAttribute("data-ezfy-media-position", position);
-
     }
-
   }
 
-
   async function _getCurrentProductImages() {
-
+    
     return new Promise(async (resolve, reject) => {
       const url = `${window.location.origin}/${window.location.pathname}.json`;
       let response = await fetch(url);
@@ -539,11 +412,9 @@ ezfyDawnThemeZoom = (function() {
   }
 
   function loadLocalPhotoSwipeUI() {
-
     if (window.PhotoSwipeUI_Default !== undefined) {
       return true;
     }
-
     return new Promise(async (resolve, reject) => {
 
       ! function(a, b) {
@@ -867,20 +738,14 @@ ezfyDawnThemeZoom = (function() {
       while (!window.PhotoSwipeUI_Default) {
         await new Promise(resolve => setTimeout(resolve, 10));
       }
-
-
       resolve(true);
-
     });
   }
 
-
   function loadLocalPhotoSwipe() {
-
     if (window.PhotoSwipe !== undefined) {
       return true;
     }
-
     return new Promise(async (resolve, reject) => {
       /*beautify ignore:start*/
       ! function(a, b) {
@@ -1964,15 +1829,9 @@ ezfyDawnThemeZoom = (function() {
       while (!window.PhotoSwipe) {
         await new Promise(resolve => setTimeout(resolve, 10));
       }
-
-
       resolve(true);
-
     });
   }
-
-
-
 
   async function loadPhotoswipe() {
     return new Promise(async (resolve, reject) => {
@@ -1990,26 +1849,14 @@ ezfyDawnThemeZoom = (function() {
 
   /* Adds essential data attributes for the images to be clickable. */
   async function addImageSizeDataAttribute() {
-
     const $images = document.querySelectorAll(CSS_PRODUCT_IMAGE_TAG);
-
     if (!$images) {
       return;
     }
-
     const images = await _getCurrentProductImages();
-
-
-
     for (const [i, each] of $images.entries()) {
-
       const $parent = each.closest(CSS_PRODUCT_IMAGE_PARENT);
-
-
-
-
       const $index = each.closest(`[id*='Slide-template'][data-ezfy-media-position], li[data-media-id][data-ezfy-media-position]`);
-
 
       if (!$index) {
         continue;
@@ -2019,27 +1866,17 @@ ezfyDawnThemeZoom = (function() {
       if (!_index) {
         return;
       }
-
+      
       const index = parseInt(_index);
-
-
       const image = images.filter(e => e.position === index)[0]
-
-
       const height = image.height;
       const width = image.width;
       const src = image.src;
 
-
-
-
       $parent.setAttribute("data-size-zoom", `${width}x${height}`);
       $parent.setAttribute("data-image-large", src);
       $parent.setAttribute("data-ezfy-zoom-type", ZOOM_TYPE);
-
-
     }
-
 
     if (!IS_DAWN_SLIDER) {
       const $medias = document.querySelectorAll(CSS_PRODUCT_IMAGE_PARENT);
@@ -2049,28 +1886,20 @@ ezfyDawnThemeZoom = (function() {
         each.setAttribute("data-slide-index", i);
       }
     }
-
   }
 
   function initPhotoSwipeZoom() {
     var initPhotoSwipeFromDOM = function(gallerySelector) {
-
-
-
       /* Gets all images 
             ======================= */
       var parseThumbnailElements = function(el) {
-
-
+        
         var $elements = document.querySelectorAll(CSS_INDIVIDUAL_SLIDES_WITHOUT_VIDEO),
-
           items = [],
           linkEl,
           size,
           item;
-
-
-
+        
         for (var i = 0; i < $elements.length; i++) {
           const $el = $elements[i]; //child element
 
@@ -2078,13 +1907,11 @@ ezfyDawnThemeZoom = (function() {
           if ($el.nodeType !== 1) {
             continue;
           }
-
           if (!$el.getAttribute("data-size-zoom")) {
             continue;
           }
-
+          
           size = $el.getAttribute('data-size-zoom').split('x');
-
           // create slide object
           item = {
             src: $el.getAttribute('data-image-large'),
@@ -2093,106 +1920,65 @@ ezfyDawnThemeZoom = (function() {
           };
 
           const $image = $el.querySelector('img');
-
           item.msrc = $el.getAttribute('data-image-large')
           item.imagePosition = $el.getAttribute(`data-image-position`);
-
           item.el = $el;
           items.push(item);
         }
-
-
-
-
-
         return items;
       };
-
 
       var _closest = function _closest(el, fn) {
         return el && (fn(el) ? el : _closest(el.parentNode, fn));
       };
-
       var onImageClick = function(e) {
-
-
-
         e = e || window.event;
         e.preventDefault ? e.preventDefault() : e.returnValue = false;
 
         var eTarget = e.target || e.srcElement;
-
-
         const $parent = eTarget.closest(CSS_PRODUCT_IMAGE_PARENT);
-
-
 
         if ($parent) {
           const isVideo = $parent.querySelector("video");
-
 
           if (isVideo) {
             return;
           }
         }
 
-
-
-
         if (!eTarget.classList.contains('EzfyZoom-button')) {
           return;
         }
 
-
-
         var clickedListItem = _closest(eTarget, function(el) {
-
-
           if (!el || !el.classList) {
             return false;
           }
-
           return (el.matches(CSS_INDIVIDUAL_SLIDE));
         });
-
-
 
         if (!clickedListItem) {
           return;
         }
 
-
         const $clickedParent = clickedListItem.parentNode;
-
         var clickedGallery = $clickedParent;
         var $children = $clickedParent.querySelectorAll(CSS_INDIVIDUAL_SLIDE);
         var totalChildren = $children.length;
         var nodeIndex = 0;
         var index;
-
-
-
         const $index = $clickedParent.closest(`[data-slide-index]`);
-
-
 
         if (!$index) {
           return;
         }
-
         index = parseInt($index.getAttribute(`data-slide-index`));
-
-
-
-
         if (index >= 0) {
 
           openPhotoSwipe(index, clickedGallery);
         }
-
         return false;
       };
-
 
       var openPhotoSwipe = function(index, galleryElement, disableAnimation, fromURL) {
         var pswpElement = document.querySelectorAll('.pswp')[0],
@@ -2200,12 +1986,8 @@ ezfyDawnThemeZoom = (function() {
           options,
           items;
 
-
-
         items = parseThumbnailElements(galleryElement);
-
-
-
+        
         options = {
           barsSize: {
             top: 0,
@@ -2215,34 +1997,25 @@ ezfyDawnThemeZoom = (function() {
           captionEl: false,
           closeOnScroll: false,
           pinchToClose: false,
-
           tapToToggleControls: false,
           history: false,
-
+          
           galleryUID: galleryElement.getAttribute('data-pswp-uid'),
-
           getThumbBoundsFn: function(index) {
-
-
 
             var thumbnail = items[index].el.getElementsByTagName('img')[0],
               pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
               rect = thumbnail.getBoundingClientRect();
-
             return {
               x: rect.left,
               y: rect.top + pageYScroll,
               w: rect.width
             };
           }
-
         };
-
 
         if (fromURL) {
           if (options.galleryPIDs) {
-
-
             for (var j = 0; j < items.length; j++) {
               if (items[j].pid == index) {
                 options.index = j;
@@ -2250,13 +2023,11 @@ ezfyDawnThemeZoom = (function() {
               }
             }
           } else {
-
             options.index = parseInt(index, 10) - 1;
           }
         } else {
           options.index = parseInt(index, 10);
         }
-
 
         if (isNaN(options.index)) {
           return;
@@ -2266,22 +2037,18 @@ ezfyDawnThemeZoom = (function() {
           options.showAnimationDuration = 0;
         }
 
-
         gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
         gallery.init();
         gallery.ui.hideControls();
         gallery.listen('beforeChange', function() {
 
           const $close = document.querySelector(`#ezfyLightbox`);
-
           $close.classList.add(`ezfy-lightbox--block`)
-
           const image = ezfyDawnThemeZoomImages.filter(e => gallery.currItem.src.includes(e.src))[0]
 
           if (!image) {
             return;
           }
-
 
           const position = image.imagePosition;
 
@@ -2306,24 +2073,18 @@ bodyScrollLock.enableBodyScroll(targetElement);
   });
     }
         gallery.listen('mouseUsed', function() {
-
           console.log("mouse")
         });
-    
       };
 
-
       var galleryElements = document.querySelectorAll(gallerySelector);
-
       for (var i = 0, l = galleryElements.length; i < l; i++) {
         galleryElements[i].setAttribute('data-pswp-uid', i + 1);
         galleryElements[i].onclick = onImageClick;
       }
     };
 
-
     initPhotoSwipeFromDOM(CSS_PARENT_SELECTOR);
-
   }
 
   function updateMainImageEzfySlider(position) {
@@ -2345,85 +2106,50 @@ bodyScrollLock.enableBodyScroll(targetElement);
   }
 
   function injectButton() {
-
-
-
-
-
     if (window.ezfyDawnThemeZoomButtonsCreated) {
       return;
     }
 
     const $button = `<button type="button" class="EzfyZoom-button  motion-reduce btn btn--body btn--circle js-photoswipe__zoom product__photo-zoom"></button>`;
-
     const $images = document.querySelectorAll(CSS_PRODUCT_IMAGE_PARENT);
 
     if (!$images) {
       return;
     }
-
-
-
-
-
     for (let each of $images) {
-
       if (each.hasAttribute(`data-product-media-type-video`)) {
         continue;
       }
-
       each.insertAdjacentHTML('beforeend', $button);
     }
-
     window.ezfyDawnThemeZoomButtonsCreated = true;
-
   }
 
   function updateMainSliderImageAsPhotoSwipeChanges(position) {
-
-
-
     if (isDawnSliderInstalled()) {
-
       window.ezfyDawnSlider.select(position - 1, window.ezfy_options.featuredImageLoop, true);
       console.log();
-
     }
 
     const layout = detectCurrentLayout();
     if ((!layout === 'thumbnails' || !layout === 'thumbnail_slider')) {
       return;
     }
-
-
-
     const $thumbnail = document.querySelector(`[id*='Slide-Thumbnail'][data-ezfy-media-position='${position}'] > button`);
-
     if (!$thumbnail) {
       return;
     }
-
-
     $thumbnail.click();
-
-
-
-
   }
 
   function updateMainImageOnMobile(position) {
-
-
     if (!_isMobile()) {
       return;
     }
-
-
+    
     const $slide = document.querySelector(`
 		li[data-ezfy-media-position='${position}'],
 		li[id^='Slide-template'][data-ezfy-media-position='${position}']`);
-
-
 
     if ($slide) {
 
@@ -2436,16 +2162,10 @@ bodyScrollLock.enableBodyScroll(targetElement);
         console.log("finishe", position);
         $parent.style.scrollBehavior = 'smooth';
       }, 10);
-
-
     }
-
-
-
   }
 
   function blockLightboxOnSliderDrag() {
-
     if (!IS_DAWN_SLIDER || !window.ezfyVentureSliderFeatured || !options.blockSlider || _isMobile()) {
       return;
     }
@@ -2454,8 +2174,6 @@ bodyScrollLock.enableBodyScroll(targetElement);
     const $image = document.querySelector(`#featuredImageSlider`);
 
     window.ezfyVentureSliderFeatured.on('dragMove', function(event, pointer, moveVector) {
-
-
 
       if ($image.classList.contains(_class)) {
         return;
@@ -2469,14 +2187,8 @@ bodyScrollLock.enableBodyScroll(targetElement);
     });
   }
 
-
   function reset() {
-
-
-
-
     const $slides = document.querySelectorAll(`[data-ezfy-media-position]`);
-
     for (var each of $slides) {
       each.removeAttribute("data-ezfy-media-position");
       each.removeAttribute(`data-slide-index`);
@@ -2484,39 +2196,27 @@ bodyScrollLock.enableBodyScroll(targetElement);
   }
 
   function onSwatchChange() {
-
     const $radios = document.querySelectorAll(`[class*='product-form'] [type='radio']`)
-
     if (!$radios) {
       return;
     }
-
     for (var $radio of $radios) {
       $radio.addEventListener("click", async function() {
-
         await _sleep(100);
-
         restart();
       });
     }
   }
 
-
-
   async function restart() {
     reset();
-
-
     addImagePositionDataAttribute();
     addImagePositionDataAttributeToThumbnails();
-
     await addImageSizeDataAttribute();
-
     initPhotoSwipeZoom();
     blockLightboxOnSliderDrag();
     injectButton();
   }
-
 
   return {
     restart: restart,
@@ -2533,21 +2233,16 @@ bodyScrollLock.enableBodyScroll(targetElement);
       document.addEventListener("DOMContentLoaded", async function() {
 
         if (_isProductPage()) {
-
           await addImageSizeDataAttribute();
           await _sleep(DELAY_AFTER_LOADING_PHOTO_SWIPE);
-
           initPhotoSwipeZoom();
           blockLightboxOnSliderDrag();
           injectButton();
         }
-
       });
 
       window.addEventListener("resize", function() {});
-
       window.addEventListener("load", function() {});
-
       window.addEventListener("scroll", function() {});
     },
   };

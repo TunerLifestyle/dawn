@@ -94,16 +94,14 @@
     "166025610046d85589": {
       "type": "apps",
       "blocks": {
-        "b9d6d49d-ab1a-4205-a0f4-05e748c5ff3f": {
-          "type": "shopify:\/\/apps\/okendo-product-reviews-ugc\/blocks\/reviews-widget\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+        "0ab7265f-23ed-4867-84b5-9410a6b1e344": {
+          "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
-            "product": "{{product}}",
-            "widget_type": "reviews_widget"
           }
         }
       },
       "block_order": [
-        "b9d6d49d-ab1a-4205-a0f4-05e748c5ff3f"
+        "0ab7265f-23ed-4867-84b5-9410a6b1e344"
       ],
       "settings": {
         "include_margins": true

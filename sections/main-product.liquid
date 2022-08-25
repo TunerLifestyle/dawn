@@ -317,6 +317,11 @@
             {%- when 'title' -%}
               <div class="product__title" {{ block.shopify_attributes }}>
                 <h1>{{ product.title | escape }}</h1>
+{% comment %}Start automatically added Judge.me widget{% endcomment %}
+  <div class="product__text">
+  </div>
+{% comment %}End automatically added Judge.me widget{% endcomment %}
+
                 <a href="{{ product.url }}" class="product__title">
                   <h2 class="h1">
                     {{ product.title | escape }}
@@ -325,7 +330,7 @@
               </div>
             {%- when 'price' -%}
                                 <div class="tl-reviews">
-                  {% render 'okendo-reviews-product-rating-summary', product: product %}
+{% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', concierge_install: true %}
         </div>
               <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                 {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}

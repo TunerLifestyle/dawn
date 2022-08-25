@@ -331,7 +331,7 @@
               </div>
             {%- when 'price' -%}
                                 <div class="tl-reviews">
-                  {% render 'okendo-reviews-product-rating-summary', product: product %}
+{% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', concierge_install: true %}
         </div>
               <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                 {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}

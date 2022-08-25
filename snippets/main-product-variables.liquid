@@ -1,6 +1,20 @@
 {%- assign isBarCodeAvailable = false -%}
 {%- assign daysProductPriceValidUntil = 90 | times: 86400 %}
 
+{%- if product.metafields.judgeme.badge != blank %}
+    {%- assign ratingValueReviewArray = product.metafields.judgeme.badge | split: "data-average-rating='" -%}
+    {%- assign ratingValueArr = ratingValueReviewArray[1] |split: "'" -%}
+    {%- assign reviewValue = ratingValueArr[0] -%}
+    {%- assign reviewsCountStrArray = product.metafields.judgeme.badge | split: "data-number-of-reviews='" -%}
+    {%- assign reviewsCountArr = reviewsCountStrArray[1] | split: "'" -%}
+    {%- assign reviewsCount = reviewsCountArr[0] -%}
+    {%- unless reviewsCount == '0' -%}
+        {%- assign reviewAppDescription = '"Judge.me Reviews"' -%}
+        {%- assign ratingValue = reviewValue -%}
+        {%- assign reviewCount = reviewsCount -%}
+    {%- endunless -%}
+{%- endif -%}
+
 {%- if product.selected_or_first_available_variant.barcode != blank -%}
 
     {%- assign isBarCodeAvailable = true -%}
@@ -33,19 +47,15 @@
         "mpn": "{{product.selected_or_first_available_variant.sku}}",
         {%- endif -%}
     {%- endif -%}
-              {% if product.metafields.okendo.summaryData.reviewCount > 0 %}
-                "aggregateRating": {
-                    "@type": "AggregateRating",
-                    "ratingValue": "{{ product.metafields.okendo.summaryData.reviewAverageValue }}",
-                    "ratingCount": "{{ product.metafields.okendo.summaryData.reviewCount }}"
-                },
-            {% elsif product.metafields.okendo.ReviewCount > 0 %}
-                "aggregateRating": {
-                    "@type": "AggregateRating",
-                    "ratingValue": "{{ product.metafields.okendo.ReviewAverageValue }}",
-                    "ratingCount": "{{ product.metafields.okendo.ReviewCount }}"
-                },
-            {% endif %}
+  
+    {%- if reviewAppDescription != blank and ratingValue and reviewCount %}
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "description": {{ reviewAppDescription }},
+            "ratingValue": "{{ ratingValue }}",
+            "reviewCount": "{{ reviewCount }}"
+        },
+    {%- endif %}
         "offers": [
     {%- assign variant = product.selected_variant -%}
     {%- if variant %}

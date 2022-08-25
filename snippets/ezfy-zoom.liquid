@@ -2042,8 +2042,6 @@ ezfyDawnThemeZoom = (function() {
         gallery.ui.hideControls();
         gallery.listen('beforeChange', function() {
 
-          const $close = document.querySelector(`#ezfyLightbox`);
-          $close.classList.add(`ezfy-lightbox--block`)
           const image = ezfyDawnThemeZoomImages.filter(e => gallery.currItem.src.includes(e.src))[0]
 
           if (!image) {

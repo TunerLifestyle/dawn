@@ -2993,3 +2993,43 @@ details-disclosure > details {
 .color-swatch {
   text-indent: -9999px;
 }
+
+/* JUDGEME */
+.jdgm-widget.jdgm-preview-badge {
+  visibility: hidden;
+}
+
+.jdgm-widget.jdgm-preview-badge.jdgm--done-setup {
+  visibility: visible;
+}
+
+.jdgm-row-extra:before {    
+    color: #008190;
+    font-weight: 600;
+    font-size: 12px;
+    margin-right: 6px;
+content: 'Verified Buyer';
+}
+
+.jdgm-row-extra:after {
+    font-family: 'JudgemeIcons';
+    font-size: 10px;
+    color: white;
+    background-color: #008190;
+    padding: 0.16rem;
+    border-radius: 100%;
+    content: "\e001";
+}
+
+.jdgm-rev__buyer-badge-wrapper, .jdgm-rev__buyer-badge, .jdgm-rev-widg__summary-average, .jdgm-rev[data-verified-buyer="true"] .jdgm-rev__icon.jdgm-rev__icon:after, .jdgm-rev-widg__title {
+display: none !important;
+}
+
+.jdgm-rev__header {
+  margin-bottom: 1.5rem !important;
+}
+
+.jdgm-write-rev-link {
+  font-size: 15px !important;
+  font-weight: 500 !important;
+}

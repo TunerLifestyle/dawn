@@ -900,6 +900,13 @@ class VariantRadios extends VariantSelects {
 
 customElements.define('variant-radios', VariantRadios);
 
+  theme.Photoswipe = (function() {
+    var selectors = {
+      trigger: '.js-photoswipe__zoom',
+      images: '.photoswipe__image',
+      activeImage: '.is-active'
+    };
+  
     function Photoswipe(container, sectionId) {
       this.container = container;
       this.sectionId = sectionId;

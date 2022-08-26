@@ -33,9 +33,6 @@
     width="1100"
     height="{{ 1100 | divided_by: media.preview_image.aspect_ratio | ceil }}"
     data-media-id="{{ media.id }}"
-            data-photoswipe-src="{{ zoom_img_url }}"
-          data-photoswipe-width="{{ media_width }}"
-          data-photoswipe-height="{{ media_height }}"
     {% if variant_image %}class="product__media-item--variant"{% endif %}
   >
 {%- else -%}

@@ -540,6 +540,9 @@ ezfyDawnThemeZoom = (function() {
 
   function loadLocalPhotoSwipeUI() {
 
+    if (window.PhotoSwipeUI_Default !== undefined) {
+      return true;
+    }
 
     return new Promise(async (resolve, reject) => {
 
@@ -874,9 +877,6 @@ ezfyDawnThemeZoom = (function() {
 
   function loadLocalPhotoSwipe() {
 
-    if (window.PhotoSwipe !== undefined) {
-      return true;
-    }
 
     return new Promise(async (resolve, reject) => {
       /*beautify ignore:start*/

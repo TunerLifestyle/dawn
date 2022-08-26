@@ -922,3 +922,5 @@ customElements.define('variant-radios', VariantRadios);
   
       this.init();
     }
+        return Photoswipe;
+  });

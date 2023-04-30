@@ -6,23 +6,16 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Image banner",
+            "heading": "",
             "heading_size": "h0"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
-            "text_style": "body"
           }
         },
         "button": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop all",
+            "button_label_1": "",
             "button_link_1": "shopify:\/\/collections\/all",
-            "button_style_secondary_1": true,
+            "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
             "button_style_secondary_2": false
@@ -31,12 +24,12 @@
       },
       "block_order": [
         "heading",
-        "text",
         "button"
       ],
       "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
+        "image": "shopify:\/\/shop_images\/springsale-tunerlifestyle.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
         "desktop_content_position": "bottom-center",
         "show_text_box": false,
         "desktop_content_alignment": "center",
@@ -47,34 +40,60 @@
         "show_text_below": false
       }
     },
-    "rich_text": {
-      "type": "rich-text",
+    "9417ad76-a8bd-4e09-9c43-a7341ff71cdb": {
+      "type": "multicolumn",
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "template--16809888022781__9417ad76-a8bd-4e09-9c43-a7341ff71cdb-1682860823adcc0297-0": {
+          "type": "column",
           "settings": {
-            "heading": "Talk about your brand",
-            "heading_size": "h1"
+            "image": "shopify:\/\/shop_images\/racing-backpacks-jdm-bags-takata-bride-sparco-racing-harness-shoulder-straps-tunerlifestyle.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "shopify:\/\/collections\/bride-backpacks"
           }
         },
-        "text": {
-          "type": "text",
+        "template--16809888022781__9417ad76-a8bd-4e09-9c43-a7341ff71cdb-1682860823adcc0297-1": {
+          "type": "column",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+            "image": "shopify:\/\/shop_images\/car-enthusiast-hoodies-v2.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "shopify:\/\/collections\/car-hoodies"
+          }
+        },
+        "template--16809888022781__9417ad76-a8bd-4e09-9c43-a7341ff71cdb-1682860823adcc0297-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/car-keychains-collection-jdm-nos-turbo-fidgets-keyring-tunerlifestyle.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "shopify:\/\/collections\/car-keychains"
           }
         }
       },
       "block_order": [
-        "heading",
-        "text"
+        "template--16809888022781__9417ad76-a8bd-4e09-9c43-a7341ff71cdb-1682860823adcc0297-0",
+        "template--16809888022781__9417ad76-a8bd-4e09-9c43-a7341ff71cdb-1682860823adcc0297-1",
+        "template--16809888022781__9417ad76-a8bd-4e09-9c43-a7341ff71cdb-1682860823adcc0297-2"
       ],
       "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
         "color_scheme": "background-1",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 0
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "featured_collection": {
@@ -108,7 +127,7 @@
   },
   "order": [
     "image_banner",
-    "rich_text",
+    "9417ad76-a8bd-4e09-9c43-a7341ff71cdb",
     "featured_collection"
   ]
 }

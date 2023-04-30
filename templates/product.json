@@ -41,7 +41,7 @@
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
-            "show_dynamic_checkout": true,
+            "show_dynamic_checkout": false,
             "show_gift_card_recipient": false
           }
         },
@@ -86,12 +86,6 @@
             "page": ""
           }
         },
-        "share": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
-          }
-        },
         "94dac63c-771b-4b23-84fc-5e13c8dbe5c4": {
           "type": "custom_liquid",
           "settings": {
@@ -112,7 +106,6 @@
         "collapsible-row-1",
         "collapsible-row-2",
         "collapsible-row-3",
-        "share",
         "94dac63c-771b-4b23-84fc-5e13c8dbe5c4"
       ],
       "settings": {
